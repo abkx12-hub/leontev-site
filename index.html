@@ -281,19 +281,22 @@
     }
 
     .profile-inner {
+      position: relative;
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background:
-        linear-gradient(145deg, rgba(24,34,45,.72), rgba(47,95,91,.72)),
-        url("pavel-photo.jpg");
-      background-size: cover;
-      background-position: center;
       display: grid;
       place-items: center;
       color: #fff;
       text-align: center;
       overflow: hidden;
+    }
+
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
 
     .profile-fallback {
@@ -907,16 +910,16 @@
         <div class="hero-card">
           <div class="hero-left">
             <div>
-              <div class="kicker">Системный подбор новостроек</div>
-              <h1>Помогаю выбрать новостройку без переплаты и скрытых рисков</h1>
+              <div class="kicker">Павел Леонтьев · бизнес- и премиум-класс</div>
+              <h1>Павел Леонтьев — советник по покупке новостроек</h1>
               <p class="lead">
-                Не просто показываю объекты. Сравниваю цель покупки, экономику сделки,
+                Помогаю выбрать новостройку без переплаты и скрытых рисков: сравниваю цель покупки, экономику сделки,
                 застройщика, документы, планировку, срок сдачи и ликвидность на горизонте 3–5 лет.
               </p>
 
               <div class="actions">
                 <a class="btn btn-primary" href="#contact">Получить разбор объекта</a>
-                <a class="btn btn-light" href="#example">Посмотреть пример оценки</a>
+                <a class="btn btn-light" href="tel:+79936266544">Позвонить</a>
               </div>
             </div>
 
@@ -950,7 +953,8 @@
 
               <div class="profile" title="Чтобы добавить фото: положите файл pavel-photo.jpg рядом с HTML">
                 <div class="profile-inner">
-                  <div class="profile-fallback">
+                  <img class="profile-image" src="pavel-photo.jpg" alt="Павел Леонтьев" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+                  <div class="profile-fallback" hidden>
                     <div>
                       <strong>ПЛ</strong>
                       <span>здесь будет круглая фотография<br>pavel-photo.jpg</span>
