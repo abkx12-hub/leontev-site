@@ -16,5 +16,12 @@
   "SITE_URL": "https://leontev.pro/",
   "TV_URL": "https://www.1tv.ru/shows/dobroe-utro/pro-dengi/vy-v-otpusk-a-my-na-rasprodazhu-dobroe-utro-fragment-vypuska-ot-26-06-2026",
   "EXPERT_NAME": "Павел Леонтьев",
-  "COMPANY_NAME": "Азбука новостроек"
+  "COMPANY_NAME": "Азбука новостроек",
+  "WHATSAPP_URL": "https://wa.me/79936266544",
+  "TELEGRAM_URL": "",
+  "TV_START_TIME": "2:10",
+  "TV_START_SECONDS": "130",
+  "TV_BUTTON_TEXT": "Смотреть с 2:10",
+  "TV_NOTE": "Комментарий Павла в сюжете начинается примерно с 2:10.",
+  "TV_URL_WITH_TIME": "https://www.1tv.ru/shows/dobroe-utro/pro-dengi/vy-v-otpusk-a-my-na-rasprodazhu-dobroe-utro-fragment-vypuska-ot-26-06-2026"
 }
