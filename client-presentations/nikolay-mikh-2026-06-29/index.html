@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Сравнение вариантов для Николая — Варшавское направление</title>
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --paper: #ffffff;
+      --ink: #182033;
+      --muted: #667085;
+      --line: rgba(24,32,51,.13);
+      --gold: #b9934b;
+      --gold-soft: #ead7ad;
+      --graphite: #111827;
+      --green: #1f8a5b;
+      --amber: #b7791f;
+      --red: #b42318;
+      --shadow: 0 20px 60px rgba(24,32,51,.12);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(185,147,75,.18), transparent 35%),
+        linear-gradient(180deg, #fbf8f2 0%, var(--bg) 55%, #eee4d4 100%);
+      line-height: 1.48;
+    }
+    .page { width: min(1180px, calc(100% - 28px)); margin: 0 auto; padding: 28px 0 60px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 22px; color: var(--muted); font-size: 14px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; color: var(--ink); }
+    .brand-mark { width: 42px; height: 42px; border-radius: 14px; background: linear-gradient(135deg, var(--graphite), #394150); color: var(--gold-soft); display: grid; place-items: center; box-shadow: var(--shadow); letter-spacing: .04em; }
+    .tag { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 999px; padding: 9px 13px; background: rgba(255,255,255,.65); white-space: nowrap; }
+    .hero { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; margin-bottom: 18px; }
+    .hero-main { background: linear-gradient(135deg, var(--graphite), #263043); color: #fff; border-radius: 30px; padding: 42px; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+    .hero-main::after { content: ""; position: absolute; right: -130px; top: -120px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(185,147,75,.42), transparent 68%); }
+    .eyebrow { color: var(--gold-soft); text-transform: uppercase; letter-spacing: .11em; font-size: 13px; font-weight: 900; margin-bottom: 14px; }
+    h1 { margin: 0 0 18px; font-size: clamp(34px, 5vw, 60px); line-height: .98; letter-spacing: -.05em; max-width: 860px; }
+    .lead { color: rgba(255,255,255,.78); font-size: clamp(17px, 2vw, 22px); max-width: 780px; margin: 0; }
+    .hero-side { display: grid; gap: 14px; }
+    .fact-card, .section, .matrix, .client-note { background: rgba(255,255,255,.78); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    .fact-card { padding: 24px; }
+    .fact-card h3 { margin: 0 0 12px; font-size: 22px; letter-spacing: -.03em; }
+    .fact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .fact { border: 1px solid var(--line); background: #fff; border-radius: 16px; padding: 13px; }
+    .fact span { display: block; font-size: 12px; color: var(--muted); margin-bottom: 3px; }
+    .fact b { font-size: 17px; }
+    .section { padding: 30px; margin-top: 18px; }
+    .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; margin-bottom: 18px; }
+    h2 { margin: 0; font-size: clamp(26px, 3vw, 40px); line-height: 1.08; letter-spacing: -.04em; }
+    .section-head p { margin: 0; color: var(--muted); max-width: 560px; }
+    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 18px; min-height: 150px; }
+    .card small { display: block; color: var(--gold); font-weight: 900; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 8px; }
+    .card strong { display: block; font-size: 20px; margin-bottom: 8px; letter-spacing: -.03em; }
+    .card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .matrix { margin-top: 18px; overflow: hidden; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 980px; background: #fff; }
+    th, td { padding: 13px 12px; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; font-size: 14px; }
+    th { background: #f0e7d8; color: #2c3444; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+    td:first-child, th:first-child { position: sticky; left: 0; background: inherit; z-index: 1; min-width: 190px; font-weight: 800; }
+    tr:nth-child(even) td { background: #fbfaf7; }
+    tr:nth-child(odd) td { background: #fff; }
+    .ok { color: var(--green); font-weight: 900; }
+    .warn { color: var(--amber); font-weight: 900; }
+    .bad { color: var(--red); font-weight: 900; }
+    .score { font-weight: 900; font-size: 16px; white-space: nowrap; }
+    .score.good { color: var(--green); }
+    .score.mid { color: var(--amber); }
+    .score.low { color: var(--red); }
+    .rank-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 12px; }
+    .rank { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 20px; position: relative; overflow: hidden; }
+    .rank::before { content: attr(data-rank); position: absolute; right: 16px; top: 8px; color: rgba(185,147,75,.18); font-size: 70px; font-weight: 900; line-height: 1; }
+    .rank h3 { margin: 0 0 8px; font-size: 22px; letter-spacing: -.03em; position: relative; z-index: 1; }
+    .rank p { margin: 0; color: var(--muted); position: relative; z-index: 1; }
+    .calc { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 12px; }
+    .calc-box { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+    .calc-box span { display: block; color: var(--muted); font-size: 13px; margin-bottom: 7px; }
+    .calc-box b { display: block; font-size: 23px; letter-spacing: -.04em; }
+    .client-note { padding: 28px; margin-top: 18px; background: linear-gradient(135deg, #fff, #f6ead4); }
+    .client-note h2 { margin-bottom: 12px; }
+    .whatsapp { white-space: pre-line; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 18px; font-size: 15px; }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 13px 18px; border-radius: 14px; background: var(--graphite); color: #fff; text-decoration: none; font-weight: 900; border: 1px solid var(--graphite); }
+    .btn.secondary { background: #fff; color: var(--graphite); border-color: var(--line); }
+    .drive-card { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 22px; box-shadow: var(--shadow); }
+    .footer { color: var(--muted); display: flex; justify-content: space-between; gap: 18px; margin-top: 22px; font-size: 13px; }
+    @media (max-width: 940px) { .hero { grid-template-columns: 1fr; } .cards, .rank-grid, .calc { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 620px) {
+      .page { width: min(100% - 18px, 1180px); padding-top: 14px; }
+      .topbar { flex-direction: column; align-items: flex-start; }
+      .hero-main, .section, .client-note, .fact-card { padding: 20px; border-radius: 22px; }
+      .cards, .rank-grid, .calc, .fact-grid { grid-template-columns: 1fr; }
+      .actions { flex-direction: column; }
+      .btn { width: 100%; }
+      th, td { font-size: 13px; padding: 11px 9px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">PL</div>
+        <div>Леонтьев Павел<br><span style="font-weight:500;color:var(--muted)">Сравнение новостроек • аналитика решения</span></div>
+      </div>
+      <div class="tag">Клиент: Николай • Варшавское / южное направление</div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-main">
+        <div class="eyebrow">Экспертное сравнение</div>
+        <h1>Не “пачка PDF”, а таблица компромиссов по фактам.</h1>
+        <p class="lead">Запрос Николая точный: большая 2-кк / 3Е, нормальная кухня, понятная локация, паркинг, ремонт и итоговая цена. Идеального совпадения нет — поэтому сравниваем, где выигрываем, а где платим компромиссом.</p>
+      </div>
+      <aside class="hero-side">
+        <div class="fact-card">
+          <h3>Критерии Николая</h3>
+          <div class="fact-grid">
+            <div class="fact"><span>Формат</span><b>2-кк / 3Е</b></div>
+            <div class="fact"><span>Площадь</span><b>67–72 м²</b></div>
+            <div class="fact"><span>Кухня</span><b>17+ м²</b></div>
+            <div class="fact"><span>Этаж</span><b>не низ / не верх</b></div>
+            <div class="fact"><span>Локация</span><b>Варшавка / юг</b></div>
+            <div class="fact"><span>Расчёт</span><b>уточнить условия</b></div>
+          </div>
+        </div>
+        <div class="fact-card">
+          <h3>Главный вывод</h3>
+          <p style="margin:0;color:var(--muted)">Идеального совпадения по всем параметрам нет. РГ / Аннино сильный по локации и метро, но слабее по площади и кухне. Наметкин Тауэр 3Е сильнее по самой квартире, но это апартаменты и не Варшавка. Гранель Коломенское — рабочий компромисс по южному направлению. Герцена интересна по цене, но есть риск по локации и близости к МКАД.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Что сравниваем</h2>
+        <p>Для Николая важна не только цена квартиры. Реальная стоимость = квартира + ремонт + паркинг + риск локации.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><small>Площадь</small><strong>67–72 м²</strong><p>Маленькие 57–58 м² проходят хуже, даже если цена выглядит красивой.</p></div>
+        <div class="card"><small>Кухня</small><strong>17+ м²</strong><p>Кухня — один из главных фильтров. 11–13 м² для него слабый вариант.</p></div>
+        <div class="card"><small>Ремонт</small><strong>100–150 тыс./м²</strong><p>Голые стены могут добавить 7–12 млн к итоговой стоимости.</p></div>
+        <div class="card"><small>Паркинг</small><strong>+2–3+ млн</strong><p>Без паркинга для него решение неполное: вопрос хранения машины остаётся важным фактором решения.</p></div>
+      </div>
+    </section>
+
+    <section class="matrix">
+      <div style="padding:26px 30px 12px">
+        <h2>Сравнение галочками</h2>
+        <p style="color:var(--muted);margin:8px 0 0">✅ проходит, ⚠️ компромисс, ❌ не проходит / сильный минус, ? нет данных в PDF.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Вариант</th><th>Цена</th><th>67–72 м²</th><th>Кухня 17+</th><th>Этаж</th><th>Балкон</th><th>Срок ≤2027</th><th>Локация</th><th>До ~27 млн</th><th>Итог</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Наметкин Тауэр 3Е</td><td>26,38 млн</td><td><span class="ok">✅</span> 73,4 м²</td><td><span class="ok">✅</span> 25,7 м²</td><td><span class="ok">✅</span> 5/29</td><td><span class="ok">✅</span> лоджия</td><td><span class="ok">✅</span> 4 кв. 2026</td><td><span class="warn">⚠️</span> Черёмушки, не Варшавка</td><td><span class="ok">✅</span></td><td><span class="score good">6/7</span></td></tr>
+            <tr><td>Гранель Коломенское</td><td>26,84 млн</td><td><span class="warn">⚠️</span> 66,22 м²</td><td><span class="ok">✅</span> 24,38 м²</td><td><span class="ok">✅</span> 9/30</td><td><span class="warn">?</span></td><td><span class="ok">✅</span> 2 кв. 2027</td><td><span class="warn">⚠️</span> Нагатинская / юг</td><td><span class="ok">✅</span></td><td><span class="score mid">5/7</span></td></tr>
+            <tr><td>Герцена</td><td>23,23 млн</td><td><span class="warn">⚠️</span> 66,4 м²</td><td><span class="ok">✅</span> 17 м²</td><td><span class="ok">✅</span> 6/23</td><td><span class="ok">✅</span> балкон</td><td><span class="ok">✅</span> 4 кв. 2026</td><td><span class="bad">❌</span> Бирюлёво / МКАД</td><td><span class="ok">✅</span></td><td><span class="score mid">5/7</span></td></tr>
+            <tr><td>Москворечье</td><td>26,51 млн</td><td><span class="warn">⚠️</span> 64 м²</td><td><span class="ok">✅</span> 21,3 м²</td><td><span class="ok">✅</span> 12/14</td><td><span class="ok">✅</span> балкон</td><td><span class="bad">❌</span> 4 кв. 2028</td><td><span class="warn">⚠️</span> Каширская, 20 мин</td><td><span class="ok">✅</span></td><td><span class="score mid">4/7</span></td></tr>
+            <tr><td>РГ / Варшавские ворота / Аннино</td><td>18,84 млн / 25,48 с отделкой</td><td><span class="bad">❌</span> 57,9 м²</td><td><span class="bad">❌</span> 12,7 м²</td><td><span class="ok">✅</span> 8/30</td><td><span class="ok">✅</span> лоджия</td><td><span class="ok">✅</span> 2 кв. 2026</td><td><span class="ok">✅</span> Аннино, 5 мин</td><td><span class="ok">✅</span></td><td><span class="score mid">4/7</span></td></tr>
+            <tr><td>N’ICE LOFT</td><td>24,62 млн</td><td><span class="bad">❌</span> 58,96 м²</td><td><span class="ok">✅</span> 17,47 м²</td><td><span class="ok">✅</span> 5/18</td><td><span class="ok">✅</span> терраса</td><td><span class="ok">✅</span> сдан</td><td><span class="bad">❌</span> Калитники</td><td><span class="ok">✅</span></td><td><span class="score mid">5/7 формально</span></td></tr>
+            <tr><td>ЖК МАРК</td><td>29,36 млн</td><td><span class="bad">❌</span> 58 м²</td><td><span class="ok">✅</span> 22,3 м²</td><td><span class="ok">✅</span> 15/18</td><td><span class="warn">?</span></td><td><span class="ok">✅</span> 4 кв. 2027</td><td><span class="bad">❌</span> ЗИЛ, 20 мин</td><td><span class="bad">❌</span></td><td><span class="score low">3/7</span></td></tr>
+            <tr><td>Level Южнопортовая</td><td>27,49 млн</td><td><span class="warn">⚠️</span> 63,6 м²</td><td><span class="bad">❌</span> 11,9 м²</td><td><span class="ok">✅</span> 12/50</td><td><span class="ok">✅</span> лоджия</td><td><span class="bad">❌</span> 1 кв. 2029</td><td><span class="bad">❌</span> Печатники</td><td><span class="warn">⚠️</span></td><td><span class="score low">2–3/7</span></td></tr>
+            <tr><td>Наметкин 2-к старый</td><td>28,03 млн</td><td><span class="bad">❌</span> 57,7 м²</td><td><span class="bad">❌</span> 11,3 м²</td><td><span class="bad">❌</span> 27/29</td><td><span class="ok">✅</span> лоджия</td><td><span class="ok">✅</span> 4 кв. 2026</td><td><span class="warn">⚠️</span> Черёмушки</td><td><span class="warn">⚠️</span></td><td><span class="score low">2–3/7</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Топ-3 для обсуждения</h2><p>Не отправлять 9 PDF. Для Николая достаточно 3 рабочих сценария + РГ/Аннино как исходный ориентир.</p></div>
+      <div class="rank-grid">
+        <div class="rank" data-rank="1"><h3>Наметкин Тауэр 3Е</h3><p><b>Лучший по самой квартире.</b> 73,4 м², кухня 25,7 м², 5 этаж, лоджия, срок 2026. Минусы: апартаменты, Черёмушки, ремонт.</p></div>
+        <div class="rank" data-rank="2"><h3>Гранель Коломенское</h3><p><b>Лучший компромисс южного направления.</b> 66,2 м², кухня 24,4 м², 9 этаж, подчистовая. Минусы: не чистая Варшавка, Гранель.</p></div>
+        <div class="rank" data-rank="3"><h3>Герцена</h3><p><b>Сильный по цене и кухне.</b> 23,23 млн, 66,4 м², кухня 17 м², балкон. Минусы: Бирюлёво, близость к МКАД, транспорт до метро.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Ремонт меняет экономику</h2><p>По голым стенам нельзя сравнивать только цену квартиры. Для себя нужно считать доведение до нормального состояния.</p></div>
+      <div class="calc">
+        <div class="calc-box"><span>Ориентир нормального ремонта</span><b>100–150 тыс./м²</b></div>
+        <div class="calc-box"><span>Наметкин 73,4 м²</span><b>7,3–11,0 млн</b></div>
+        <div class="calc-box"><span>Гранель 66,2 м²</span><b>6,6–9,9 млн</b></div>
+        <div class="calc-box"><span>Паркинг</span><b>+2–3+ млн</b></div>
+      </div>
+    </section>
+
+    <section class="client-note">
+      <h2>Короткий вывод по вариантам</h2>
+      <div class="whatsapp">Николай, по вашему запросу идеального совпадения нет. У каждого варианта есть компромисс: где-то лучше площадь и кухня, где-то сильнее локация, где-то нужно отдельно считать ремонт и паркинг.
+
+Смысл сравнения — не отправить пачку PDF, а быстро увидеть, какие варианты реально стоит обсуждать.
+
+Короткий вывод:
+
+1. РГ / Аннино — лучший по локации и метро, но слабее по площади и кухне: 57,9 м² и кухня 12,7 м².
+2. Наметкин Тауэр 3Е — самый сильный по самой квартире: 73,4 м², кухня 25,7 м², 5 этаж, срок 2026. Минус — апартаменты и не Варшавка.
+3. Гранель Коломенское — хороший компромисс: 66,2 м², кухня 24,4 м², 9 этаж, подчистовая, срок 2027. Минус — не чистая Варшавка.
+4. Герцена — хорошо по цене и кухне: 23,23 млн, 66,4 м², кухня 17 м², балкон. Минус — Бирюлёво и близость к МКАД.
+
+Лучше обсуждать не все PDF подряд, а 2–3 сценария по фактам: квартира + ремонт + паркинг + срок + локация. Тогда сразу видно, есть ли смысл куда-то ехать.</div>
+    </section>
+
+
+    <section class="section" aria-labelledby="pdf-title">
+      <div class="section-head">
+        <h2 id="pdf-title">PDF-презентации объектов</h2>
+        <p>В этой папке лежат исходные PDF-презентации объектов, которые использовались для сравнения.</p>
+      </div>
+      <div class="drive-card">
+        <div class="actions">
+          <a class="btn" href="https://drive.google.com/drive/folders/1BfwS0CAXSHOod2OKAx3RLu16KdD31hTh" target="_blank" rel="noopener">Открыть папку с PDF</a>
+          <a class="btn secondary" href="https://leontev.pro/">Открыть сайт Павла</a>
+          <a class="btn secondary" href="tel:+79936266544">Позвонить Павлу</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>Павел Леонтьев • Азбука новостроек</div>
+      <div>Сравнение подготовлено для рабочего обсуждения</div>
+    </footer>
+  </main>
+</body>
+</html>
