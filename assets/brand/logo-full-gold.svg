@@ -1,0 +1,25 @@
+<svg width="820" height="420" viewBox="0 0 820 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Павел Леонтьев — стратегия, экспертиза, результат</title>
+  <desc id="desc">Полный золотой логотип Павла Леонтьева для финальных экранов и презентаций</desc>
+  <defs>
+    <linearGradient id="gold" x1="190" y1="40" x2="610" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8E3A5"/>
+      <stop offset="0.42" stop-color="#D3A54F"/>
+      <stop offset="1" stop-color="#8A6424"/>
+    </linearGradient>
+  </defs>
+  <rect width="820" height="420" rx="42" fill="#081018"/>
+  <rect x="34" y="34" width="752" height="352" rx="32" stroke="url(#gold)" stroke-opacity=".32"/>
+  <g transform="translate(338 54)">
+    <rect x="0" y="0" width="144" height="144" rx="44" stroke="url(#gold)" stroke-width="5"/>
+    <path d="M38 104V40h24c13 0 21 8 21 21v43H71V62c0-7-3-10-10-10H50v52H38Z" fill="url(#gold)"/>
+    <path d="M84 104V73h12v19h22v12H84Z" fill="url(#gold)"/>
+    <path d="M70 104V88l35-35h13L82 89v15H70Z" fill="url(#gold)" opacity=".92"/>
+    <path d="M54 104V78h6v26h-6Zm14 0V64h6v40h-6Zm14 0V52h6v52h-6Z" fill="#F8E3A5" opacity=".58"/>
+  </g>
+  <text x="410" y="258" text-anchor="middle" fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" font-size="56" letter-spacing="8">ПАВЕЛ ЛЕОНТЬЕВ</text>
+  <line x1="170" y1="292" x2="282" y2="292" stroke="url(#gold)" stroke-width="2" opacity=".82"/>
+  <line x1="538" y1="292" x2="650" y2="292" stroke="url(#gold)" stroke-width="2" opacity=".82"/>
+  <text x="410" y="300" text-anchor="middle" fill="#E5C981" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" letter-spacing="6">СТРАТЕГИЯ • ЭКСПЕРТИЗА • РЕЗУЛЬТАТ</text>
+  <text x="410" y="338" text-anchor="middle" fill="#C9B57C" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="7">НЕДВИЖИМОСТЬ БИЗНЕС- И ПРЕМИУМ-КЛАССА</text>
+</svg>
