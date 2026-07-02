@@ -1,0 +1,14 @@
+<svg width="520" height="520" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Фоновая монограмма ПЛ">
+  <defs>
+    <linearGradient id="gold" x1="80" y1="60" x2="450" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4D98D"/>
+      <stop offset="0.5" stop-color="#C99A44"/>
+      <stop offset="1" stop-color="#7E5B20"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="456" height="456" rx="150" stroke="url(#gold)" stroke-width="18" opacity=".56"/>
+  <path d="M152 374V146h88c43 0 70 27 70 70v158h-48V220c0-20-10-30-30-30h-32v184h-48Z" fill="url(#gold)" opacity=".84"/>
+  <path d="M304 374V264h48v65h72v45H304Z" fill="url(#gold)" opacity=".84"/>
+  <path d="M255 374V312l118-118h48L303 312v62h-48Z" fill="url(#gold)" opacity=".66"/>
+  <path d="M207 374V282h20v92h-20Zm42 0V232h20v142h-20Zm42 0V190h20v184h-20Z" fill="#F4D98D" opacity=".42"/>
+</svg>
