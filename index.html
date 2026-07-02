@@ -181,9 +181,12 @@
     .ba-col.after li:before { content: "✓"; color: var(--gold2); }
 
     .media-box { display: grid; grid-template-columns: 1.04fr .96fr; gap: 34px; align-items: center; padding: 32px; border: 1px solid rgba(229, 201, 129, .24); border-radius: 32px; background: rgba(255, 255, 255, .055); }
+    .media-visual { display: grid; gap: 12px; }
     .media-preview { position: relative; display: block; overflow: hidden; aspect-ratio: 16/9; border-radius: 28px; border: 1px solid rgba(229, 201, 129, .5); background: #070d13; box-shadow: 0 24px 70px rgba(0, 0, 0, .34), 0 0 0 10px rgba(229, 201, 129, .045); }
-    .media-preview img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(1.08) contrast(1.07) brightness(1.08); }
-    .play-button { position: absolute; left: 50%; top: 50%; z-index: 2; display: grid; place-items: center; width: 86px; height: 86px; border-radius: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, #f2d98f, var(--gold)); color: #171308; font-size: 32px; font-weight: 900; box-shadow: 0 18px 46px rgba(0, 0, 0, .35); opacity: .94; }
+    .media-preview:after { content: ""; position: absolute; inset: auto 0 0 0; z-index: 1; height: 38%; background: linear-gradient(180deg, transparent, rgba(8, 16, 24, .38)); pointer-events: none; }
+    .media-preview img { width: 100%; height: 100%; object-fit: cover; object-position: 42% center; filter: saturate(1.08) contrast(1.07) brightness(1.08); }
+    .play-button { position: absolute; right: 28px; bottom: 28px; left: auto; top: auto; z-index: 2; display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; transform: none; background: linear-gradient(135deg, #f2d98f, var(--gold)); color: #171308; font-size: 24px; font-weight: 900; box-shadow: 0 14px 34px rgba(0, 0, 0, .35); opacity: .96; }
+    .media-note { margin: 0; color: #aeb9c8; font-size: 13px; line-height: 1.45; }
     .media-caption { margin-top: 16px !important; color: #aeb9c8 !important; font-size: 14px; }
     .media-content h2 { margin: 12px 0 14px; font-size: clamp(30px, 3.8vw, 48px); line-height: 1.05; letter-spacing: -.052em; text-wrap: balance; }
     .media-content p { color: #cbd6e4; }
@@ -256,7 +259,7 @@
       .format.featured { order: -1; }
       .media-box { padding: 22px; gap: 22px; }
       .media-preview { border-radius: 22px; }
-      .play-button { width: 64px; height: 64px; font-size: 24px; }
+      .play-button { right: 18px; bottom: 18px; width: 50px; height: 50px; font-size: 20px; }
       .logo-compact { width: min(286px, 82vw); }
       .brand-divider { margin-top: 40px; gap: 12px; }
       .footerin { display: grid; justify-items: start; }
@@ -343,7 +346,7 @@
     </section>
 
     <section id="media" class="section-dark">
-      <div class="wrap media-box"><a class="media-preview" href="https://www.1tv.ru/shows/dobroe-utro/pro-dengi/vy-v-otpusk-a-my-na-rasprodazhu-dobroe-utro-fragment-vypuska-ot-26-06-2026" target="_blank" rel="noopener" aria-label="Смотреть комментарий Павла Леонтьева на сайте Первого канала"><img src="assets/media-poster.svg?v=poster-typography-20260701" alt="Постер комментария Павла Леонтьева на Первом канале" loading="lazy"><span class="play-button">▶</span></a><div class="media-content"><div class="eyebrow">СМИ</div><h2>Павел Леонтьев в программе «Доброе утро»</h2><p>Комментарий для Первого канала по теме скидок на новостройки и реальной выгоды покупателя.</p><p>Главная мысль эфира: скидка в рекламе и настоящая экономия — не одно и то же. Перед покупкой важно считать цену метра, условия оплаты, срок сдачи, платежи, риски и будущую ликвидность.</p><p class="media-caption">Фрагмент начинается примерно с 2:12. Кнопка открывает видео на сайте Первого канала.</p><div class="actions"><a class="button gold" href="https://www.1tv.ru/shows/dobroe-utro/pro-dengi/vy-v-otpusk-a-my-na-rasprodazhu-dobroe-utro-fragment-vypuska-ot-26-06-2026" target="_blank" rel="noopener">Смотреть комментарий с 2:12</a><a class="button dark" href="#contact">Получить разбор объекта</a></div></div></div>
+      <div class="wrap media-box"><div class="media-visual"><a class="media-preview" href="https://www.1tv.ru/shows/dobroe-utro/pro-dengi/vy-v-otpusk-a-my-na-rasprodazhu-dobroe-utro-fragment-vypuska-ot-26-06-2026" target="_blank" rel="noopener" aria-label="Смотреть комментарий Павла Леонтьева на сайте Первого канала"><img src="assets/media-poster.svg?v=poster-typography-20260701" alt="Постер комментария Павла Леонтьева на Первом канале" loading="lazy"><span class="play-button">▶</span></a><p class="media-note">Фрагмент эфира. Комментарий начинается примерно с 2:12.</p></div><div class="media-content"><div class="eyebrow">СМИ</div><h2>Павел Леонтьев в программе «Доброе утро»</h2><p>Комментарий для Первого канала о скидках на новостройки и реальной выгоде покупателя.</p><p>Главная мысль эфира: скидка в рекламе и настоящая экономия — не одно и то же. Перед покупкой важно считать цену метра, условия оплаты, срок сдачи, платежи, ремонт, риски и будущую ликвидность.</p><p class="media-caption">Кнопка открывает видео на сайте Первого канала.</p><div class="actions"><a class="button gold" href="https://www.1tv.ru/shows/dobroe-utro/pro-dengi/vy-v-otpusk-a-my-na-rasprodazhu-dobroe-utro-fragment-vypuska-ot-26-06-2026" target="_blank" rel="noopener">Смотреть комментарий с 2:12</a><a class="button dark" href="#contact">Получить разбор объекта</a></div></div></div>
     </section>
 
     <section id="formats" class="section-light">
