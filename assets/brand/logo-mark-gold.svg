@@ -2,14 +2,34 @@
   <title id="title">Монограмма ПЛ</title>
   <desc id="desc">Фирменный золотой знак Павла Леонтьева</desc>
   <defs>
-    <clipPath id="clip"><rect width="96" height="96" rx="20"/></clipPath>
-    <linearGradient id="edge" x1="18" y1="10" x2="82" y2="88" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#f4d98d"/>
-      <stop offset=".5" stop-color="#c99a44"/>
-      <stop offset="1" stop-color="#7d5a20"/>
+    <linearGradient id="gold" x1="19" y1="14" x2="78" y2="82" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8E3A4"/>
+      <stop offset="0.44" stop-color="#D1A24B"/>
+      <stop offset="1" stop-color="#8A6425"/>
     </linearGradient>
+    <linearGradient id="softGold" x1="34" y1="22" x2="69" y2="72" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1BA"/>
+      <stop offset="1" stop-color="#B98531"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#D6A84F" flood-opacity="0.18"/>
+    </filter>
   </defs>
-  <rect width="96" height="96" rx="20" fill="#07111d"/>
-  <image href="data:image/jpeg;base64,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" width="96" height="96" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip)"/>
-  <rect x="1.5" y="1.5" width="93" height="93" rx="20" stroke="url(#edge)" stroke-width="2" opacity=".5"/>
+
+  <rect x="1" y="1" width="94" height="94" rx="22" fill="#07111D"/>
+  <rect x="1.5" y="1.5" width="93" height="93" rx="22" stroke="url(#gold)" stroke-opacity="0.42"/>
+
+  <path d="M17 67C9 55.5 9 40.5 17 29" stroke="url(#gold)" stroke-width="2.2" stroke-linecap="round" opacity="0.78"/>
+  <path d="M79 29C87 40.5 87 55.5 79 67" stroke="url(#gold)" stroke-width="2.2" stroke-linecap="round" opacity="0.78"/>
+
+  <g filter="url(#glow)">
+    <path d="M27 70V24H60V34H39V70H27Z" fill="url(#gold)"/>
+    <path d="M58 70V44H68V60H80V70H58Z" fill="url(#gold)"/>
+    <path d="M43 70L56 28H66L52 70H43Z" fill="url(#softGold)"/>
+  </g>
+
+  <path d="M43 70V51L50 44V70" stroke="#F7D989" stroke-width="1.8" stroke-linecap="round" opacity="0.72"/>
+  <path d="M52 70V40L59 32V70" stroke="#F7D989" stroke-width="1.8" stroke-linecap="round" opacity="0.68"/>
+  <path d="M35 24H62" stroke="#FFF0B6" stroke-width="1.4" stroke-linecap="round" opacity="0.52"/>
+  <path d="M59 44H69" stroke="#FFF0B6" stroke-width="1.2" stroke-linecap="round" opacity="0.46"/>
 </svg>

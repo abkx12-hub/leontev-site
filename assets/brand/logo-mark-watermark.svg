@@ -1,14 +1,20 @@
-<svg width="520" height="520" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Фоновая монограмма ПЛ">
+<svg width="520" height="520" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Фоновая монограмма ПЛ">
   <defs>
-    <linearGradient id="gold" x1="80" y1="60" x2="450" y2="470" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F4D98D"/>
-      <stop offset="0.5" stop-color="#C99A44"/>
-      <stop offset="1" stop-color="#7E5B20"/>
+    <linearGradient id="gold" x1="19" y1="14" x2="78" y2="82" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8E3A4"/>
+      <stop offset="0.44" stop-color="#D1A24B"/>
+      <stop offset="1" stop-color="#8A6425"/>
+    </linearGradient>
+    <linearGradient id="softGold" x1="34" y1="22" x2="69" y2="72" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1BA"/>
+      <stop offset="1" stop-color="#B98531"/>
     </linearGradient>
   </defs>
-  <rect x="32" y="32" width="456" height="456" rx="150" stroke="url(#gold)" stroke-width="18" opacity=".56"/>
-  <path d="M152 374V146h88c43 0 70 27 70 70v158h-48V220c0-20-10-30-30-30h-32v184h-48Z" fill="url(#gold)" opacity=".84"/>
-  <path d="M304 374V264h48v65h72v45H304Z" fill="url(#gold)" opacity=".84"/>
-  <path d="M255 374V312l118-118h48L303 312v62h-48Z" fill="url(#gold)" opacity=".66"/>
-  <path d="M207 374V282h20v92h-20Zm42 0V232h20v142h-20Zm42 0V190h20v184h-20Z" fill="#F4D98D" opacity=".42"/>
+  <path d="M17 67C9 55.5 9 40.5 17 29" stroke="url(#gold)" stroke-width="2.2" stroke-linecap="round" opacity="0.76"/>
+  <path d="M79 29C87 40.5 87 55.5 79 67" stroke="url(#gold)" stroke-width="2.2" stroke-linecap="round" opacity="0.76"/>
+  <path d="M27 70V24H60V34H39V70H27Z" fill="url(#gold)" opacity="0.9"/>
+  <path d="M58 70V44H68V60H80V70H58Z" fill="url(#gold)" opacity="0.9"/>
+  <path d="M43 70L56 28H66L52 70H43Z" fill="url(#softGold)" opacity="0.86"/>
+  <path d="M43 70V51L50 44V70" stroke="#F7D989" stroke-width="1.8" stroke-linecap="round" opacity="0.72"/>
+  <path d="M52 70V40L59 32V70" stroke="#F7D989" stroke-width="1.8" stroke-linecap="round" opacity="0.68"/>
 </svg>
