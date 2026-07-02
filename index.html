@@ -44,7 +44,7 @@
     .nav { position: sticky; top: 0; z-index: 30; background: rgba(8, 16, 24, .92); border-bottom: 1px solid rgba(229, 201, 129, .14); backdrop-filter: blur(18px); }
     .navin { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
     .brand { display: flex; align-items: center; gap: 12px; min-width: 232px; font-size: 18px; font-weight: 900; letter-spacing: -.04em; }
-    .brand-mark { width: 42px; height: 42px; flex: 0 0 42px; filter: drop-shadow(0 8px 18px rgba(229, 201, 129, .12)); }
+    .brand-mark { width: 42px; height: 42px; flex: 0 0 42px; border-radius: 13px; object-fit: cover; background: #07111d; filter: drop-shadow(0 8px 18px rgba(229, 201, 129, .16)); }
     .brand small { display: block; color: var(--muted); font-size: 11px; letter-spacing: .04em; line-height: 1.25; }
     .links { display: flex; gap: 16px; color: #c7d0dc; font-size: 14px; font-weight: 800; }
     .links a:hover { color: var(--gold2); }
@@ -60,14 +60,14 @@
     .section-light .eyebrow { color: var(--gold); }
     .section-light .eyebrow:before { background: var(--gold); }
 
-    .brand-watermark { position: absolute; width: min(34vw, 420px); opacity: .05; pointer-events: none; z-index: 0; filter: saturate(.82); }
-    .hero-watermark { right: 5vw; top: 56px; width: min(36vw, 460px); opacity: .055; }
-    .project-watermark { right: 36px; top: 24px; width: min(28vw, 360px); opacity: .048; }
-    .cta-watermark { right: 7vw; top: 28px; width: min(30vw, 380px); opacity: .048; }
-    .section-mark { width: 34px; height: 34px; margin-bottom: 18px; opacity: .9; }
+    .brand-watermark { position: absolute; width: min(34vw, 420px); opacity: .045; pointer-events: none; z-index: 0; filter: none; mix-blend-mode: screen; }
+    .hero-watermark { right: 4%; top: 10%; width: min(34vw, 420px); opacity: .045; }
+    .project-watermark { right: 36px; top: 24px; width: min(26vw, 330px); opacity: .038; }
+    .cta-watermark { right: 7vw; top: 28px; width: min(28vw, 340px); opacity: .04; }
+    .section-mark { width: 34px; height: 34px; margin-bottom: 18px; border-radius: 11px; opacity: .9; }
     .brand-divider { display: flex; align-items: center; justify-content: center; gap: 18px; margin: 58px auto 0; opacity: .68; }
     .brand-divider span { width: min(88px, 24vw); height: 1px; background: linear-gradient(90deg, transparent, rgba(229, 201, 129, .84), transparent); }
-    .brand-divider img { width: 32px; height: 32px; }
+    .brand-divider img { width: 32px; height: 32px; border-radius: 10px; }
     .brand-signature { display: grid; justify-items: center; gap: 12px; margin-bottom: 22px; }
     .logo-compact { width: min(330px, 78vw); height: auto; }
     .logo-full { width: min(420px, 82vw); height: auto; }
@@ -105,6 +105,14 @@
     .photo-caption { width: min(400px, 82vw); margin-left: auto; padding: 18px; border: 1px solid rgba(229, 201, 129, .22); border-radius: 22px; background: rgba(255, 255, 255, .06); color: #d7e0ec; }
     .photo-caption b { display: block; color: #fff; }
     .photo-caption span { font-size: 14px; color: #b8c4d3; }
+
+    .quick-nav { padding: 20px 0; background: #0b121b; border-top: 1px solid rgba(229, 201, 129, .14); border-bottom: 1px solid rgba(229, 201, 129, .14); }
+    .quick-nav-in { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .quick-nav-title { color: var(--gold2); font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+    .quick-chips { display: flex; flex-wrap: wrap; gap: 9px; }
+    .quick-chips a { display: inline-flex; align-items: center; min-height: 38px; padding: 0 14px; border: 1px solid rgba(229, 201, 129, .24); border-radius: 999px; background: rgba(255, 255, 255, .055); color: #d7e0ec; font-size: 13px; font-weight: 900; }
+    .quick-chips a:hover { border-color: rgba(229, 201, 129, .62); color: var(--gold2); }
+    .mobile-sticky-cta { display: none; }
 
     .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
     .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -212,7 +220,7 @@
     .footer { padding: 24px 0; color: #7d8795; font-size: 13px; background: #081018; }
     .footerin { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
     .footer-brand { display: inline-flex; align-items: center; gap: 10px; color: #aeb8c5; }
-    .footer-brand img { width: 28px; height: 28px; opacity: .78; }
+    .footer-brand img { width: 28px; height: 28px; border-radius: 9px; opacity: .78; }
 
     @media (max-width: 1180px) {
       .grid4 { grid-template-columns: repeat(2, 1fr); }
@@ -230,19 +238,19 @@
       .brand-watermark { opacity: .035; }
     }
     @media (max-width: 640px) {
+      body { padding-bottom: 76px; }
       .desktop-nowrap, .route-title .keep { white-space: normal; }
       .desktop-only { display: none; }
       .wrap { width: min(100% - 32px, var(--max)); }
       .navin { height: 68px; }
       .brand { min-width: auto; font-size: 16px; }
-      .brand-mark { width: 36px; height: 36px; flex-basis: 36px; }
+      .brand-mark { width: 36px; height: 36px; flex-basis: 36px; border-radius: 11px; }
       .brand small { display: none; }
       .nav .button { min-height: 40px; padding: 0 12px; }
-      .hero { padding: 38px 0 54px; }
-      .hero-watermark { right: -36px; top: 26px; width: 240px; opacity: .028; }
-      .project-watermark, .cta-watermark { right: -48px; width: 230px; opacity: .028; }
-      .hero h1 { font-size: clamp(40px, 12vw, 52px); line-height: 1.02; letter-spacing: -.055em; }
-      .lead { font-size: 17px; }
+      .hero { padding: 38px 0 48px; }
+      .brand-watermark { display: none; }
+      .hero h1 { font-size: 36px; line-height: 1.03; letter-spacing: -.047em; }
+      .lead { font-size: 17px; line-height: 1.45; }
       .fact-grid, .project-flow, .big-numbers, .cost-grid, .formula-strip, .formats { grid-template-columns: 1fr; }
       .actions { display: grid; grid-template-columns: 1fr; }
       .actions .button { width: 100%; }
@@ -251,17 +259,24 @@
       .channel { min-height: 44px; padding: 0 8px; }
       .portrait-frame { width: min(250px, 72vw); border-radius: 28px; }
       .photo-caption { width: 100%; }
-      section { padding: 58px 0; }
-      .section-head h2, .route-title { font-size: 32px; line-height: 1.09; letter-spacing: -.04em; }
-      .card, .method-card, .case-card, .format, .fit-card, .filter-col { padding: 22px; }
-      .project-card, .filter-box { padding: 22px; }
-      .project-card h2 { font-size: 32px; line-height: 1.1; }
+      section { padding: 48px 0; }
+      .section-head { margin-bottom: 28px; }
+      .section-head h2, .route-title { font-size: 30px; line-height: 1.1; letter-spacing: -.038em; }
+      .card, .method-card, .case-card, .format, .fit-card, .filter-col { padding: 20px; }
+      .project-card, .filter-box { padding: 20px; }
+      .project-card h2 { font-size: 30px; line-height: 1.1; }
       .format.featured { order: -1; }
       .media-box { padding: 22px; gap: 22px; }
       .media-preview { border-radius: 22px; }
       .play-button { right: 18px; bottom: 18px; width: 50px; height: 50px; font-size: 20px; }
       .logo-compact { width: min(286px, 82vw); }
       .brand-divider { margin-top: 40px; gap: 12px; }
+      .quick-nav { padding: 16px 0; position: sticky; top: 68px; z-index: 24; background: rgba(8, 16, 24, .94); backdrop-filter: blur(14px); }
+      .quick-nav-in { display: grid; gap: 10px; }
+      .quick-chips { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 2px; scrollbar-width: none; }
+      .quick-chips::-webkit-scrollbar { display: none; }
+      .quick-chips a { flex: 0 0 auto; min-height: 36px; }
+      .mobile-sticky-cta { position: fixed; left: 16px; right: 16px; bottom: 14px; z-index: 40; display: flex; align-items: center; justify-content: center; min-height: 52px; border-radius: 18px; background: linear-gradient(135deg, #f0d78f, var(--gold)); color: #171308; font-weight: 900; box-shadow: 0 20px 44px rgba(0, 0, 0, .35); }
       .footerin { display: grid; justify-items: start; }
     }
   </style>
@@ -269,7 +284,7 @@
 <body>
   <nav class="nav">
     <div class="wrap navin">
-      <a class="brand" href="#top"><img class="brand-mark" src="assets/brand/logo-mark-gold.svg" alt="ПЛ"><span>Павел Леонтьев<small>Стратегическое сопровождение покупки</small></span></a>
+      <a class="brand" href="#top"><img class="brand-mark" src="assets/brand/logo-mark-gold.svg?v=realmark-20260702" alt="ПЛ"><span>Павел Леонтьев<small>Стратегическое сопровождение покупки</small></span></a>
       <div class="links"><a href="/system/">Система</a><a href="#method">Метод</a><a href="#cases">Кейсы</a><a href="#media">СМИ</a><a href="#formats">Форматы</a><a href="#contact">Контакты</a></div>
       <a class="button" href="tel:+79936266544">Позвонить</a>
     </div>
@@ -277,7 +292,7 @@
 
   <main id="top">
     <section class="hero">
-      <img class="brand-watermark hero-watermark" src="assets/brand/logo-mark-watermark.svg" alt="" aria-hidden="true">
+      <img class="brand-watermark hero-watermark" src="assets/brand/logo-mark-gold.svg?v=realmark-20260702" alt="" aria-hidden="true">
       <div class="wrap hero-grid">
         <div>
           <div class="eyebrow">Бизнес- и премиум-класс</div>
@@ -291,6 +306,10 @@
         </div>
         <aside class="portrait-card"><div class="portrait-frame"><img src="pavel-photo.jpg" alt="Павел Леонтьев — стратегическое сопровождение покупки новостройки"></div><div class="photo-caption"><b>Павел Леонтьев</b><span>Персональный эксперт покупателя: стратегия, экономика, риски, сделка и контур после покупки.</span></div></aside>
       </div>
+    </section>
+
+    <section class="quick-nav" aria-label="Быстрая навигация по сайту">
+      <div class="wrap quick-nav-in"><span class="quick-nav-title">Что посмотреть?</span><div class="quick-chips"><a href="#system">Система</a><a href="#formats">Форматы</a><a href="#price-risk">Цена ошибки</a><a href="#search-cost">Самостоятельный поиск</a><a href="#cases">Кейсы</a><a href="#contact">Связаться</a></div></div>
     </section>
 
     <section id="fit" class="section-dark fit-section">
@@ -314,11 +333,11 @@
     </section>
 
     <section class="project-banner">
-      <div class="wrap"><div class="project-card"><img class="brand-watermark project-watermark" src="assets/brand/logo-mark-watermark.svg" alt="" aria-hidden="true"><div class="eyebrow">Покупка как проект</div><h2>Не просто подбираю новостройку. Собираю покупку как проект.</h2><p class="lead">Стратегия → объекты → экономика → риски → застройщик → сделка → приёмка → ремонт → мебель. Это центральная логика моей работы.</p><div class="project-flow"><div>Стратегия</div><div>Объекты</div><div>Экономика</div><div>Риски</div><div>Сделка</div><div>Ремонт и мебель</div></div><div class="actions"><a class="button gold" href="/formats/">Форматы и стоимость</a><a class="button dark" href="/system/">Как устроена система</a></div></div></div>
+      <div class="wrap"><div class="project-card"><img class="brand-watermark project-watermark" src="assets/brand/logo-mark-gold.svg?v=realmark-20260702" alt="" aria-hidden="true"><div class="eyebrow">Покупка как проект</div><h2>Не просто подбираю новостройку. Собираю покупку как проект.</h2><p class="lead">Стратегия → объекты → экономика → риски → застройщик → сделка → приёмка → ремонт → мебель. Это центральная логика моей работы.</p><div class="project-flow"><div>Стратегия</div><div>Объекты</div><div>Экономика</div><div>Риски</div><div>Сделка</div><div>Ремонт и мебель</div></div><div class="actions"><a class="button gold" href="/formats/">Форматы и стоимость</a><a class="button dark" href="/system/">Как устроена система</a></div></div></div>
     </section>
 
     <section class="system-banner" id="system">
-      <div class="wrap"><div class="section-head"><img class="section-mark" src="assets/brand/logo-mark-gold.svg" alt="ПЛ"><div class="eyebrow">Система Павла</div><h2 class="route-title">Главная логика: <span class="keep">стратегия → критерии</span> <span class="keep">экономика → матрица → сделка</span></h2><p>Я не работаю как агент со списком ссылок. Задача — помочь принять решение о покупке через стратегию, критерии, экономику, риски и понятный маршрут.</p></div><div class="system-flow"><div>Диагностика</div><div>Стратегия</div><div>Матрица решений</div><div>Финалисты</div></div><div class="actions"><a class="button gold" href="/system/">Открыть систему выбора</a><a class="button dark" href="/cases/">Подобрать похожий кейс</a></div></div>
+      <div class="wrap"><div class="section-head"><img class="section-mark" src="assets/brand/logo-mark-gold.svg?v=realmark-20260702" alt="ПЛ"><div class="eyebrow">Система Павла</div><h2 class="route-title">Главная логика: <span class="keep">стратегия → критерии</span> <span class="keep">экономика → матрица → сделка</span></h2><p>Я не работаю как агент со списком ссылок. Задача — помочь принять решение о покупке через стратегию, критерии, экономику, риски и понятный маршрут.</p></div><div class="system-flow"><div>Диагностика</div><div>Стратегия</div><div>Матрица решений</div><div>Финалисты</div></div><div class="actions"><a class="button gold" href="/system/">Открыть систему выбора</a><a class="button dark" href="/cases/">Подобрать похожий кейс</a></div></div>
     </section>
 
     <section id="approach" class="section-dark">
@@ -333,12 +352,12 @@
       <div class="wrap"><div class="section-head narrow"><div class="eyebrow">Кейсы</div><h2>Кейсы по типам клиентов и задач</h2><p>Обезличенные примеры показывают ход мышления: какая была ситуация, где риск, какой инструмент применён и какой следующий шаг стал понятен.</p></div><div class="grid4"><a class="case-card featured" href="/client-cases/flat-choice-strategy/"><span class="badge">Новый кейс · стратегия выбора</span><h3>Клиент не может выбрать между новостройкой, вторичкой и ремонтом</h3><div class="case-line"><b>Запрос</b><span>Квартира для жизни до 25 млн ₽.</span></div><div class="case-line"><b>Риск</b><span>Варианты есть, но стратегия не выбрана: отделка, white box, черновая или вторичка.</span></div><div class="case-line"><b>Метод</b><span>Светофор критериев и матрица решений сокращают хаос до 2–3 направлений.</span></div><span class="case-link">Смотреть кейс</span></a><a class="case-card" href="/cases/family-purchase/"><span class="badge">35 млн ₽ · семейный запрос</span><h3>Семейная покупка</h3><div class="case-line"><b>Риск</b><span>Выбрать красивый ЖК, но неудобный сценарий жизни.</span></div><div class="case-line"><b>Метод</b><span>Карта требований семьи, сравнение районов, платежей, сроков и ликвидности.</span></div><span class="case-link">Смотреть кейс</span></a><a class="case-card" href="/cases/agency-vs-self-search/"><span class="badge">Экономия времени</span><h3>Самостоятельный поиск vs сопровождение</h3><div class="case-line"><b>Риск</b><span>130 часов хаотичного поиска без сильного shortlist.</span></div><div class="case-line"><b>Метод</b><span>Фильтр, shortlist, карта поиска и следующий шаг.</span></div><span class="case-link">Смотреть кейс</span></a><a class="case-card" href="/cases/certificate-roadmap/"><span class="badge">Сертификат · сложная сделка</span><h3>Сделка с сертификатом</h3><div class="case-line"><b>Риск</b><span>Объект не проходит по срокам, документам или оплате.</span></div><div class="case-line"><b>Метод</b><span>Маршрут применения денег: объект, банк, документы, бронь, сделка.</span></div><span class="case-link">Смотреть кейс</span></a></div><div class="actions"><a class="button gold" href="/cases/">Все кейсы</a><a class="button dark" href="/system/">Как работает система</a></div></div>
     </section>
 
-    <section class="section-dark">
+    <section id="price-risk" class="section-dark">
       <div class="wrap"><div class="section-head narrow"><div class="eyebrow">Цена ошибки</div><h2>Цена ошибки часто выше стоимости сопровождения</h2><p>При покупке квартиры за 25 млн ₽ ошибка всего в 2–5% — это <span class="nowrap">500&nbsp;тыс.&nbsp;—&nbsp;1,25&nbsp;млн&nbsp;₽</span>. И это без учёта ремонта, мебели, паркинга, ипотеки, сроков, ликвидности и времени на поиск.</p></div><div class="big-numbers"><div class="big-num"><b class="stat-number">25&nbsp;млн&nbsp;₽</b><span>стоимость покупки</span></div><div class="big-num"><b class="stat-number">2–5%</b><span>типовая цена ошибки</span></div><div class="big-num"><b class="stat-number">500&nbsp;тыс.&nbsp;—<br>1,25&nbsp;млн&nbsp;₽</b><span>потери на слабом решении</span></div><div class="big-num"><b class="stat-number">40–80&nbsp;часов</b><span>самостоятельный поиск и сравнение</span></div></div></div>
     </section>
 
-    <section class="search-cost">
-      <div class="wrap"><div class="section-head narrow"><div class="eyebrow">Цена самостоятельного поиска</div><h2>Самостоятельный поиск может стоить дороже сопровождения</h2><p>Десятки звонков, дублирующиеся ссылки, поездки по Москве, разные агенты, противоречивые условия, ипотека, рассрочка, ремонт, мебель и приёмка — всё это быстро превращает покупку в хаос.</p></div><div class="cost-grid"><div class="loss-card"><b class="stat-number">40–80&nbsp;часов</b><span>поиск, звонки, переписки, поездки и сравнение</span></div><div class="loss-card"><b class="stat-number">10–20&nbsp;контактов</b><span>агенты, менеджеры застройщиков, банки, подрядчики</span></div><div class="loss-card"><b class="stat-number">20–50&nbsp;ссылок</b><span>ЖК, планировки, презентации, дубли и устаревшие предложения</span></div><div class="loss-card"><b class="stat-number">300&nbsp;тыс.&nbsp;—<br>1,6&nbsp;млн&nbsp;₽</b><span>стоимость времени при цене часа 5–20 тыс. ₽</span></div></div><div class="formula-strip"><div>60 ч × 5 000 ₽ = 300 000 ₽</div><div>60 ч × 10 000 ₽ = 600 000 ₽</div><div>60 ч × 20 000 ₽ = 1 200 000 ₽</div><div>80 ч × 20 000 ₽ = 1 600 000 ₽</div></div><div class="chaos-note"><b>Моя задача — не добавить вам ещё ссылок.</b> Я снимаю хаос: собираю критерии, отсекаю лишнее, считаю экономику и оставляю 2–3 рабочих сценария.</div><div class="brand-divider" aria-hidden="true"><span></span><img src="assets/brand/logo-mark-gold.svg" alt=""><span></span></div></div>
+    <section id="search-cost" class="search-cost">
+      <div class="wrap"><div class="section-head narrow"><div class="eyebrow">Цена самостоятельного поиска</div><h2>Самостоятельный поиск может стоить дороже сопровождения</h2><p>Десятки звонков, дублирующиеся ссылки, поездки по Москве, разные агенты, противоречивые условия, ипотека, рассрочка, ремонт, мебель и приёмка — всё это быстро превращает покупку в хаос.</p></div><div class="cost-grid"><div class="loss-card"><b class="stat-number">40–80&nbsp;часов</b><span>поиск, звонки, переписки, поездки и сравнение</span></div><div class="loss-card"><b class="stat-number">10–20&nbsp;контактов</b><span>агенты, менеджеры застройщиков, банки, подрядчики</span></div><div class="loss-card"><b class="stat-number">20–50&nbsp;ссылок</b><span>ЖК, планировки, презентации, дубли и устаревшие предложения</span></div><div class="loss-card"><b class="stat-number">300&nbsp;тыс.&nbsp;—<br>1,6&nbsp;млн&nbsp;₽</b><span>стоимость времени при цене часа 5–20 тыс. ₽</span></div></div><div class="formula-strip"><div>60 ч × 5 000 ₽ = 300 000 ₽</div><div>60 ч × 10 000 ₽ = 600 000 ₽</div><div>60 ч × 20 000 ₽ = 1 200 000 ₽</div><div>80 ч × 20 000 ₽ = 1 600 000 ₽</div></div><div class="chaos-note"><b>Моя задача — не добавить вам ещё ссылок.</b> Я снимаю хаос: собираю критерии, отсекаю лишнее, считаю экономику и оставляю 2–3 рабочих сценария.</div><div class="brand-divider" aria-hidden="true"><span></span><img src="assets/brand/logo-mark-gold.svg?v=realmark-20260702" alt=""><span></span></div></div>
     </section>
 
     <section class="section-light">
@@ -358,11 +377,12 @@
     </section>
 
     <section id="contact" class="contact">
-      <img class="brand-watermark cta-watermark" src="assets/brand/logo-mark-watermark.svg" alt="" aria-hidden="true">
+      <img class="brand-watermark cta-watermark" src="assets/brand/logo-mark-gold.svg?v=realmark-20260702" alt="" aria-hidden="true">
       <div class="wrap"><div class="brand-signature"><img class="logo-compact" src="assets/brand/logo-compact-gold.svg" alt="Павел Леонтьев — стратегия, экспертиза, результат" loading="lazy"><div class="eyebrow">Следующий шаг</div></div><h2>Если покупка квартиры — решение на десятки миллионов, работать нужно не по ссылкам, а по системе.</h2><p>Пришлите объект, район, бюджет или задачу — скажу, какой формат нужен: быстрый комментарий, диагностика, карта 360° или сопровождение.</p><div class="actions" style="justify-content:center"><a class="button gold" href="mailto:leontev@leontevpro.ru?subject=Стратегическое%20сопровождение%20покупки">Обсудить покупку</a><a class="button dark" href="https://wa.me/79936266544" target="_blank" rel="noopener">Написать в WhatsApp</a><a class="button dark" href="tel:+79936266544">Позвонить Павлу</a></div><div class="contact-channels"><span class="channel-label">Контакты:</span><a class="channel channel-wa" href="https://wa.me/79936266544" target="_blank" rel="noopener">WhatsApp</a><a class="channel channel-max" href="https://max.ru/u/f9LHodD0cOL4I0SEi8HyfIk9kgXPy_7CRBMH8zAvVY_YuXtnui5-LH6N3Uw" target="_blank" rel="noopener">MAX</a><a class="channel" href="tel:+79936266544">+7 993 626-65-44</a><a class="channel" href="mailto:leontev@leontevpro.ru">leontev@leontevpro.ru</a></div></div>
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap footerin"><span class="footer-brand"><img src="assets/brand/logo-mark-gold.svg" alt="ПЛ">© Павел Леонтьев, 2026</span><span>Информация не является индивидуальной инвестиционной рекомендацией.</span></div></footer>
+  <footer class="footer"><div class="wrap footerin"><span class="footer-brand"><img src="assets/brand/logo-mark-gold.svg?v=realmark-20260702" alt="ПЛ">© Павел Леонтьев, 2026</span><span>Информация не является индивидуальной инвестиционной рекомендацией.</span></div></footer>
+  <a class="mobile-sticky-cta" href="#contact">Обсудить покупку</a>
 </body>
 </html>
