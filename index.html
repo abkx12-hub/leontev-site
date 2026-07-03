@@ -38,6 +38,8 @@
     .wide-copy { max-width: 1120px; }
     .nowrap { white-space: nowrap; }
     .desktop-only { display: initial; }
+    h1, h2, h3 { text-wrap: balance; }
+    .price, .stat-number, .nowrap { white-space: nowrap; }
 
     .nav { position: sticky; top: 0; z-index: 30; background: rgba(8, 16, 24, .93); border-bottom: 1px solid rgba(229, 201, 129, .14); backdrop-filter: blur(18px); }
     .navin { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 18px; min-width: 0; }
@@ -141,6 +143,38 @@
     .compare-box li:before { content: "—"; position: absolute; left: 0; color: var(--gold2); font-weight: 900; }
     .compare-box.after li:before { content: "✓"; }
 
+    .roadmap { position: relative; background: radial-gradient(circle at 82% 8%, rgba(229, 201, 129, .13), transparent 28%), linear-gradient(145deg, #0b121b, #101b27); }
+    .roadmap-track { position: relative; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 10px; margin-top: 34px; min-width: 0; }
+    .roadmap-track:before { content: ""; position: absolute; left: 4%; right: 4%; top: 30px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold2), transparent); opacity: .72; }
+    .roadmap-step { position: relative; z-index: 1; min-width: 0; padding: 18px 14px; border-radius: 22px; border: 1px solid rgba(229,201,129,.24); background: rgba(255,255,255,.055); box-shadow: 0 18px 42px rgba(0,0,0,.15); }
+    .roadmap-step:after { content: "→"; position: absolute; right: -13px; top: 22px; color: var(--gold2); font-weight: 900; }
+    .roadmap-step:last-child:after { display: none; }
+    .roadmap-num { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 34px; padding: 0 8px; border-radius: 999px; border: 1px solid rgba(229,201,129,.42); color: var(--gold2); font-size: 12px; font-weight: 900; background: rgba(8,16,24,.44); }
+    .roadmap-step h3 { margin: 10px 0 7px; font-size: 18px; line-height: 1.05; letter-spacing: -.035em; }
+    .roadmap-step p { margin: 0; color: #cbd5e2; font-size: 14px; line-height: 1.35; }
+    .roadmap-note { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(250px, .65fr); gap: 18px; align-items: center; margin-top: 24px; padding: 24px 28px; border-radius: 28px; border: 1px solid rgba(229,201,129,.28); background: linear-gradient(135deg, rgba(229,201,129,.15), rgba(255,255,255,.045)); }
+    .roadmap-note p { margin: 0; color: #e0e8f2; font-size: 18px; }
+    .roadmap-note b { color: var(--gold2); }
+    .roadmap-price { justify-self: end; text-align: right; color: #dce6f2; }
+    .roadmap-price span { display: block; color: var(--muted); font-size: 12px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    .roadmap-price b { display: block; margin-top: 4px; color: var(--gold2); font-size: clamp(24px, 2.3vw, 32px); line-height: 1.05; }
+
+    .value-compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; min-width: 0; }
+    .value-column { min-width: 0; padding: 30px; border-radius: 30px; border: 1px solid rgba(23,32,43,.1); background: #fff; box-shadow: 0 16px 38px rgba(23,32,43,.07); }
+    .value-column.good { background: linear-gradient(145deg, #101b27, #0b121b); color: #fff; border-color: rgba(229,201,129,.34); box-shadow: 0 22px 48px rgba(16,27,39,.16); }
+    .value-column h3 { margin: 0 0 18px; font-size: clamp(28px, 2.8vw, 38px); line-height: 1.04; letter-spacing: -.045em; }
+    .compact-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .compact-list li { position: relative; padding-left: 22px; color: var(--soft); }
+    .compact-list li:before { content: "—"; position: absolute; left: 0; color: var(--gold); font-weight: 900; }
+    .value-column.good .compact-list li { color: #d4deeb; }
+    .value-column.good .compact-list li:before { content: "✓"; color: var(--gold2); }
+
+    .deliverables-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; min-width: 0; }
+    .deliverable-card { min-width: 0; padding: 24px; border-radius: 24px; border: 1px solid rgba(23,32,43,.09); background: #fff; box-shadow: 0 16px 38px rgba(23,32,43,.07); }
+    .deliverable-card .roadmap-num { background: rgba(184,138,58,.08); color: var(--gold); border-color: rgba(184,138,58,.28); }
+    .deliverable-card h3 { margin: 14px 0 8px; font-size: 23px; line-height: 1.1; letter-spacing: -.035em; }
+    .deliverable-card p { margin: 0; color: var(--soft); }
+
     .project-banner, .system-banner { position: relative; overflow: hidden; border-top: 1px solid rgba(229, 201, 129, .2); border-bottom: 1px solid rgba(229, 201, 129, .2); background: radial-gradient(circle at 82% 12%, rgba(229, 201, 129, .14), transparent 30%), linear-gradient(145deg, #101b27, #081018); }
     .project-card { position: relative; z-index: 1; padding: 34px; border-radius: 32px; border: 1px solid rgba(229, 201, 129, .26); background: rgba(255, 255, 255, .055); overflow: hidden; }
     .project-card h2 { max-width: 1100px; margin: 12px 0 14px; font-size: clamp(32px, 3.35vw, 50px); line-height: 1.08; letter-spacing: -.045em; text-wrap: balance; }
@@ -192,7 +226,8 @@
     .footer-mark { width: 28px; height: 28px; border-radius: 9px; display: grid; place-items: center; border: 1px solid rgba(229,201,129,.32); color: var(--gold2); font-weight: 900; font-size: 11px; letter-spacing: -.08em; opacity: .88; }
 
     @media (max-width: 1180px) {
-      .grid4, .hub-grid, .replace-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid4, .hub-grid, .replace-grid, .roadmap-track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .roadmap-step:after { display: none; }
       .project-flow, .system-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .big-numbers, .cost-grid, .formats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
@@ -218,11 +253,15 @@
       .hero { order: 1; padding: 36px 0 42px; }
       .quick-nav { order: 2; }
       #one-contact { order: 3; }
-      #formats { order: 4; }
-      #search-cost { order: 5; }
-      #cases { order: 6; }
-      #media { order: 7; }
-      #contact { order: 8; }
+      #replaces { order: 4; }
+      #roadmap { order: 5; }
+      #compare-value { order: 6; }
+      #deliverables { order: 7; }
+      #search-cost { order: 8; }
+      #formats { order: 9; }
+      #cases { order: 10; }
+      #media { order: 11; }
+      #contact { order: 12; }
       .brand-watermark { display: none; }
       .hero-grid { gap: 24px; }
       .hero h1 { font-size: clamp(34px, 10vw, 42px); line-height: 1.04; letter-spacing: -.045em; }
@@ -236,7 +275,7 @@
       .fact { padding: 13px; border-radius: 16px; }
       .fact b { font-size: 14px; line-height: 1.2; }
       .fact span { font-size: 13px; line-height: 1.35; }
-      .hub-grid, .replace-grid, .project-flow, .system-flow, .big-numbers, .cost-grid, .formats { grid-template-columns: 1fr; }
+      .hub-grid, .replace-grid, .project-flow, .system-flow, .big-numbers, .cost-grid, .formats, .deliverables-grid, .value-compare { grid-template-columns: 1fr; }
       .actions { display: grid; grid-template-columns: 1fr; }
       .actions .button { width: 100%; }
       .contact-channels { display: grid; grid-template-columns: 1fr 1fr; }
@@ -262,6 +301,19 @@
       .quick-chips { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; scrollbar-width: none; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; }
       .quick-chips::-webkit-scrollbar { display: none; }
       .quick-chips a { flex: 0 0 auto; min-height: 36px; white-space: nowrap; scroll-snap-align: start; }
+
+      .roadmap-track { grid-template-columns: 1fr; gap: 0; margin-left: 8px; padding-left: 22px; }
+      .roadmap-track:before { left: 8px; right: auto; top: 0; bottom: 0; width: 2px; height: auto; background: linear-gradient(180deg, transparent, var(--gold2), transparent); }
+      .roadmap-step { margin-bottom: 12px; padding: 16px 16px 16px 18px; }
+      .roadmap-step:before { content: ""; position: absolute; left: -22px; top: 26px; width: 11px; height: 11px; border-radius: 50%; background: var(--gold2); box-shadow: 0 0 0 5px rgba(229,201,129,.14); }
+      .roadmap-step:after { display: none; }
+      .roadmap-step h3 { font-size: 20px; }
+      .roadmap-note { grid-template-columns: 1fr; padding: 20px; }
+      .roadmap-price { justify-self: start; text-align: left; }
+      .value-column, .deliverable-card { padding: 22px; }
+      .value-column h3 { font-size: 28px; }
+      .deliverable-card h3 { font-size: 21px; }
+      .search-cost .section-head h2, #formats .section-head h2, #compare-value .section-head h2 { font-size: clamp(30px, 8.4vw, 36px); line-height: 1.1; }
       .mobile-sticky-cta { position: fixed; left: 16px; right: 16px; bottom: calc(14px + env(safe-area-inset-bottom)); z-index: 90; display: flex; align-items: center; justify-content: center; min-height: 52px; border-radius: 18px; background: linear-gradient(135deg, #f0d78f, var(--gold)); color: #171308; font-weight: 900; box-shadow: 0 20px 44px rgba(0, 0, 0, .35); opacity: 0; pointer-events: none; transform: translateY(16px); transition: opacity .22s ease, transform .22s ease; }
       .mobile-sticky-cta.is-visible, .mobile-sticky-cta:focus { opacity: 1; pointer-events: auto; transform: translateY(0); }
       .footerin { display: grid; justify-items: start; }
@@ -288,7 +340,7 @@
           <p class="sense">Один контакт вместо хаоса</p>
           <p class="lead">Один контакт вместо агентов, застройщиков, ипотеки, юристов, приёмки, ремонта и мебели.</p>
           <div class="hero-note">Вы общаетесь с одним экспертом. Я координирую агентов, застройщиков, ипотеку, юристов, подрядчиков и партнёров, чтобы покупка не превращалась в десятки чатов и случайных решений.</div>
-          <div class="fact-grid"><div class="fact"><b>от 100 000 ₽</b><span>минимальный платный формат</span></div><div class="fact"><b>от 2–3%</b><span>сопровождение покупки</span></div><div class="fact"><b>15–100+ млн ₽</b><span>бизнес / премиум сегмент</span></div><div class="fact"><b>20+ лет</b><span>стройка, управление, переговоры</span></div></div>
+          <div class="fact-grid"><div class="fact"><b>1 контакт</b><span>вместо десятков чатов</span></div><div class="fact"><b><span class="nowrap">2–3 сценария</span></b><span>вместо <span class="nowrap">20–50 ссылок</span></span></div><div class="fact"><b>Полная стоимость</b><span>квартира, ремонт, мебель</span></div><div class="fact"><b>После сделки</b><span>приёмка, ремонт, комплектация</span></div></div>
           <div class="actions"><a class="button gold" href="#contact">Обсудить покупку</a><a class="button dark" href="#one-contact">Что входит</a></div>
           <div class="contact-channels"><span class="channel-label">Связаться:</span><a class="channel channel-wa" href="https://wa.me/79936266544" target="_blank" rel="noopener">WhatsApp</a><a class="channel channel-max" href="https://max.ru/u/f9LHodD0cOL4I0SEi8HyfIk9kgXPy_7CRBMH8zAvVY_YuXtnui5-LH6N3Uw" target="_blank" rel="noopener">MAX</a><a class="channel" href="tel:+79936266544">Позвонить</a><a class="channel" href="mailto:leontev@leontevpro.ru">Email</a></div>
         </div>
@@ -297,7 +349,7 @@
     </section>
 
     <section class="quick-nav" aria-label="Быстрая навигация по сайту">
-      <div class="wrap quick-nav-in"><span class="quick-nav-title">Быстро:</span><div class="quick-chips"><a href="/system/">Система</a><a href="#formats">Форматы</a><a href="#search-cost">Цена хаоса</a><a href="#cases">Кейсы</a><a href="#media">СМИ</a><a href="#contact">Контакты</a></div></div>
+      <div class="wrap quick-nav-in"><span class="quick-nav-title">Быстро:</span><div class="quick-chips"><a href="#roadmap">Маршрут</a><a href="#compare-value">Без / с Павлом</a><a href="#deliverables">Что получите</a><a href="#formats">Форматы</a><a href="#cases">Кейсы</a><a href="#media">СМИ</a><a href="#contact">Контакты</a></div></div>
     </section>
 
     <section id="one-contact" class="section-light">
@@ -308,41 +360,51 @@
       </div>
     </section>
 
-    <section id="replaces" class="section-dark mobile-deep">
-      <div class="wrap"><div class="section-head wide-copy"><div class="eyebrow">Что я заменяю</div><h2>Что я заменяю в процессе покупки</h2><p>Покупка новостройки — это не один звонок застройщику. Это десятки решений, участников и рисков. Моя задача — собрать их в управляемую систему.</p></div><div class="replace-grid"><div class="replace-card"><b>Рынок</b><span>поиск объектов, shortlist, сравнение ЖК</span></div><div class="replace-card"><b>Застройщики</b><span>остатки, цены, акции, бронь, переговоры</span></div><div class="replace-card"><b>Ипотека</b><span>ставки, платежи, рассрочка, график денег</span></div><div class="replace-card"><b>Юридический контур</b><span>договор, документы, регистрация, риски</span></div><div class="replace-card"><b>Экономика</b><span>ремонт, мебель, аренда, cash-flow, полная стоимость</span></div><div class="replace-card"><b>Переговоры</b><span>условия, скидки, альтернативы, аргументы</span></div><div class="replace-card"><b>Приёмка</b><span>специалист, дефекты, акт, контроль</span></div><div class="replace-card"><b>Ремонт</b><span>подрядчики, смета, договор, контроль</span></div><div class="replace-card"><b>Мебель</b><span>комплектация, техника, поставки, Китай</span></div><div class="replace-card"><b>Переезд</b><span>сроки, логистика, запуск квартиры</span></div><div class="replace-card"><b>Система</b><span>таблица, матрица, светофор, дорожная карта</span></div><div class="replace-card"><b>Фокус клиента</b><span>меньше звонков, хаоса и решений на эмоциях</span></div></div></div>
+    <section id="replaces" class="section-dark">
+      <div class="wrap">
+        <div class="section-head wide-copy"><div class="eyebrow">Что я заменяю</div><h2>Я заменяю разрозненные звонки управлением покупки</h2><p>Вместо того чтобы держать в голове рынок, застройщиков, ипотеку, ремонт и документы, вы получаете один понятный центр принятия решений.</p></div>
+        <div class="replace-grid"><div class="replace-card"><b>Рынок</b><span>shortlist и сравнение ЖК</span></div><div class="replace-card"><b>Застройщики</b><span>цены, остатки, условия</span></div><div class="replace-card"><b>Ипотека</b><span>ставки, платежи, график</span></div><div class="replace-card"><b>Документы</b><span>договор, регистрация, риски</span></div><div class="replace-card"><b>Экономика</b><span>квартира, ремонт, мебель</span></div><div class="replace-card"><b>Переговоры</b><span>бронь, скидки, условия</span></div><div class="replace-card"><b>Приёмка</b><span>дефекты, акт, контроль</span></div><div class="replace-card"><b>После сделки</b><span>ремонт, мебель, запуск</span></div></div>
+      </div>
     </section>
 
-    <section id="no-center" class="section-dark mobile-deep">
-      <div class="wrap"><div class="section-head wide-copy"><div class="eyebrow">Без единого центра</div><h2>Без единого центра покупка распадается на хаос</h2><p>Самостоятельный поиск кажется бесплатным, пока не начинается поток звонков, дублей, презентаций, поездок и противоречивых условий.</p></div><div class="compare-columns"><article class="compare-box"><h3>Самостоятельно</h3><ul><li>звонки от разных агентств;</li><li>сообщения от менеджеров застройщиков;</li><li>дублирующиеся ссылки и презентации;</li><li>непонятно, где актуальные цены;</li><li>нет единой таблицы и экономики;</li><li>поездки по Москве на объекты, которые можно было отсечь онлайн;</li><li>усталость, раздражение, потеря фокуса.</li></ul></article><article class="compare-box after"><h3>С Павлом</h3><ul><li>единая карта покупки;</li><li>светофор критериев;</li><li>матрица решений;</li><li>актуальные условия;</li><li>понятный shortlist;</li><li>расчёт полной стоимости;</li><li>контроль сделки, приёмки, ремонта и следующего шага.</li></ul></article></div></div>
+    <section id="roadmap" class="roadmap section-dark">
+      <div class="wrap">
+        <div class="section-head wide-copy"><div class="eyebrow">Дорожная карта</div><h2>Дорожная карта покупки с Павлом</h2><p>Вы не собираете покупку из хаотичных звонков, ссылок и обещаний. Я веду процесс по маршруту: от стратегии до сделки, приёмки, ремонта и мебели.</p></div>
+        <div class="roadmap-track" aria-label="Маршрут покупки"><article class="roadmap-step"><span class="roadmap-num">01</span><h3>Диагностика</h3><p>цель, бюджет, срок, участники</p></article><article class="roadmap-step"><span class="roadmap-num">02</span><h3>Стратегия</h3><p>какой путь покупки</p></article><article class="roadmap-step"><span class="roadmap-num">03</span><h3>Критерии</h3><p>что отсечь сразу</p></article><article class="roadmap-step"><span class="roadmap-num">04</span><h3>Shortlist</h3><p><span class="nowrap">2–3 сценария</span> вместо 20 ссылок</p></article><article class="roadmap-step"><span class="roadmap-num">05</span><h3>Экономика</h3><p>полная стоимость решения</p></article><article class="roadmap-step"><span class="roadmap-num">06</span><h3>Проверка</h3><p>условия, документы, риски</p></article><article class="roadmap-step"><span class="roadmap-num">07</span><h3>Сделка</h3><p>бронь, ипотека, регистрация</p></article><article class="roadmap-step"><span class="roadmap-num">08</span><h3>После покупки</h3><p>приёмка, ремонт, мебель</p></article></div>
+        <div class="roadmap-note"><p><b>Платный разбор — это не один разговор.</b> Это подготовка, анализ, встреча, матрица, экономика, follow-up и следующий шаг.</p><div class="roadmap-price"><span>Платная работа</span><b class="price">от&nbsp;100&nbsp;000&nbsp;₽</b></div></div>
+      </div>
     </section>
 
-    <section id="concierge" class="section-light mobile-deep">
-      <div class="wrap"><div class="section-head wide-copy"><div class="eyebrow">Консьерж-сервис покупки</div><h2>Это формат личного консьержа при покупке недвижимости</h2><p>В премиальных банках консьерж-сервис берёт на себя организационные задачи клиента. В покупке новостройки я выполняю похожую функцию: управляю процессом, участниками, информацией и рисками.</p></div><div class="grid4"><article class="card"><h3>Один вход</h3><p>Вы общаетесь со мной, а не с десятком разрозненных участников.</p></article><article class="card"><h3>Единая система</h3><p>Все объекты, условия, риски и выводы собраны в одной логике.</p></article><article class="card"><h3>Снятие шума</h3><p>Я фильтрую звонки, обещания, дубли и рекламные предложения.</p></article><article class="card"><h3>Управление результатом</h3><p>Каждый шаг ведёт к решению, а не к новой пачке ссылок.</p></article></div></div>
+    <section id="compare-value" class="section-light">
+      <div class="wrap">
+        <div class="section-head wide-copy"><div class="eyebrow">До / после</div><h2>Без системы — хаос. С системой — управляемое решение.</h2><p>Разница не в количестве красивых вариантов, а в том, кто управляет процессом и на каком основании принимается решение.</p></div>
+        <div class="value-compare"><article class="value-column"><h3>Без Павла</h3><ul class="compact-list"><li><span class="nowrap">20–50 ссылок</span></li><li><span class="nowrap">10–20 контактов</span></li><li>звонки от агентов</li><li>разные презентации</li><li>дубли предложений</li><li>нет единой таблицы</li><li>непонятна полная стоимость</li><li>поездки на слабые объекты</li><li>решение на усталости</li></ul></article><article class="value-column good"><h3>С Павлом</h3><ul class="compact-list"><li>один контакт</li><li>карта критериев</li><li>shortlist <span class="nowrap">2–3 сценария</span></li><li>матрица объектов</li><li>расчёт полной стоимости</li><li>вопросы к застройщику</li><li>переговоры и условия</li><li>дорожная карта сделки</li><li>приёмка, ремонт, мебель</li></ul></article></div>
+      </div>
     </section>
 
-    <section id="system" class="system-banner mobile-deep">
-      <div class="wrap"><div class="section-head wide-copy"><div class="eyebrow">Система Павла</div><h2>Система нужна, чтобы покупатель не стал диспетчером чужих продаж</h2><p>Без системы покупатель собирает ссылки, звонки, презентации и обещания из разных источников. С системой он получает критерии, матрицу, экономику, shortlist и следующий шаг.</p></div><div class="system-flow"><div>Хаос входящих</div><div>Фильтр</div><div>Матрица</div><div>Экономика</div><div>Финалисты</div><div>Сделка</div></div><div class="actions"><a class="button gold" href="/system/">Открыть систему</a><a class="button dark" href="/cases/">Подобрать похожий кейс</a></div></div>
-    </section>
-
-    <section class="project-banner mobile-deep">
-      <div class="wrap"><div class="project-card"><div class="eyebrow">Что делает Павел</div><h2>Я не добавляю вам ещё ссылок. Я беру на себя управление покупкой.</h2><p class="lead">Вы получаете не поток вариантов, а понятный маршрут: стратегия, объекты, экономика, риски, сделка и контур после покупки.</p><div class="project-flow"><div>Стратегия</div><div>Объекты</div><div>Экономика</div><div>Риски</div><div>Сделка</div><div>После покупки</div></div><div class="grid3"><article class="card"><h3>Стратегия</h3><p>Отделка, white box, черновая, вторичка как альтернатива и инвестиционная логика.</p></article><article class="card"><h3>Объекты</h3><p>Shortlist, сравнение ЖК, планировок, районов и условий.</p></article><article class="card"><h3>Экономика</h3><p>Полная стоимость: квартира, ремонт, мебель, аренда, платежи и запас прочности.</p></article><article class="card"><h3>Риски</h3><p>Застройщик, сроки, документы, ликвидность и будущая продажа.</p></article><article class="card"><h3>Сделка</h3><p>Бронь, переговоры, ипотека, рассрочка, регистрация и контроль точек.</p></article><article class="card"><h3>После покупки</h3><p>Приёмка, ремонт, мебель, техника, поставки и партнёры.</p></article></div></div></div>
+    <section id="deliverables" class="section-light">
+      <div class="wrap">
+        <div class="section-head wide-copy"><div class="eyebrow">Что остаётся у клиента</div><h2>Что остаётся у вас на руках после разбора</h2><p>После встречи у вас не просто впечатления от разговора, а рабочие материалы для решения: что смотреть, что считать, что отсечь и куда двигаться дальше.</p></div>
+        <div class="deliverables-grid"><article class="deliverable-card"><span class="roadmap-num">01</span><h3>Карта стратегии</h3><p>какой путь покупки реалистичен</p></article><article class="deliverable-card"><span class="roadmap-num">02</span><h3>Светофор критериев</h3><p>красное, жёлтое, зелёное</p></article><article class="deliverable-card"><span class="roadmap-num">03</span><h3>Матрица объектов</h3><p>ЖК сравниваются по одной логике</p></article><article class="deliverable-card"><span class="roadmap-num">04</span><h3>Экономика покупки</h3><p>квартира + ремонт + мебель</p></article><article class="deliverable-card"><span class="roadmap-num">05</span><h3>Список вопросов</h3><p>что проверить у застройщика</p></article><article class="deliverable-card"><span class="roadmap-num">06</span><h3>Следующий шаг</h3><p>смотреть, считать, бронировать или отказаться</p></article></div>
+      </div>
     </section>
 
     <section id="search-cost" class="search-cost">
-      <div class="wrap"><div class="section-head wide-copy"><div class="eyebrow">Самостоятельный поиск</div><h2>Самостоятельный поиск редко бесплатен</h2><p>Даже если вы не платите специалисту, вы всё равно платите временем, вниманием и качеством решения.</p></div><div class="cost-grid"><div class="loss-card"><b>40–80 часов</b><span>поиск, звонки, переписки и поездки</span></div><div class="loss-card"><b>20–50 ссылок</b><span>ЖК, планировки, презентации и дубли</span></div><div class="loss-card"><b>10–20 контактов</b><span>агенты, менеджеры, банки и подрядчики</span></div><div class="loss-card"><b>2–4 лишних просмотра</b><span>объекты, которые можно было отсечь онлайн</span></div></div><div class="note-panel"><b>Если считать час покупателя в 5–20 тыс. ₽,</b> 60 часов самостоятельного поиска — это 300 тыс. — 1,2 млн ₽ стоимости внимания. Это не главный аргумент, но хороший способ увидеть цену хаоса.</div><div class="actions"><a class="button gold" href="/client-cases/flat-choice-strategy/search-chaos-cost.html">Открыть презентацию про цену хаоса</a><a class="button dark" href="#contact">Разобрать мою ситуацию</a></div></div>
+      <div class="wrap"><div class="section-head wide-copy"><div class="eyebrow">Цена хаоса</div><h2>Ошибка в 2–5% может стоить дороже сопровождения</h2><p>При покупке квартиры за <span class="nowrap">25 млн ₽</span> ошибка всего в <span class="nowrap">2–5%</span> — это <span class="nowrap">500 тыс. — 1,25 млн ₽</span>. Поэтому важно считать не только цену квартиры, но и ремонт, платежи, сроки, ликвидность и будущую продажу.</p></div><div class="cost-grid"><div class="loss-card"><b><span class="nowrap">40–80 часов</span></b><span>поиск, звонки, переписки и поездки</span></div><div class="loss-card"><b><span class="nowrap">20–50 ссылок</span></b><span>ЖК, планировки, презентации и дубли</span></div><div class="loss-card"><b><span class="nowrap">10–20 контактов</span></b><span>агенты, менеджеры, банки и подрядчики</span></div><div class="loss-card"><b><span class="nowrap">2–4 лишних просмотра</span></b><span>объекты, которые можно было отсечь онлайн</span></div></div><div class="note-panel"><b>Если считать час покупателя в 5–20 тыс. ₽,</b> 60 часов самостоятельного поиска — это 300 тыс. — 1,2 млн ₽ стоимости внимания. Это не главный аргумент, но хороший способ увидеть цену хаоса.</div><div class="actions"><a class="button gold" href="/client-cases/flat-choice-strategy/search-chaos-cost.html">Открыть презентацию про цену хаоса</a><a class="button dark" href="#contact">Разобрать мою ситуацию</a></div></div>
+    </section>
+
+    <section id="formats" class="section-light">
+      <div class="wrap"><div class="section-head wide-copy"><div class="eyebrow">Форматы и стоимость</div><h2>Форматы под разные стадии решения</h2><p>От первичного созвона до сопровождения сделки: формат зависит от сложности задачи, количества объектов и нужной глубины проверки.</p></div><div class="formats"><article class="format"><span class="badge">10–15 минут</span><h3>Первичный созвон</h3><span class="price">Бесплатно</span><p>Понять задачу, бюджет, срочность и подходит ли мой формат.</p><a class="button" href="#contact">Записаться</a></article><article class="format featured"><span class="recommended">Минимальный платный формат</span><h3>Стратегическая диагностика</h3><span class="price">от&nbsp;100&nbsp;000&nbsp;₽</span><p>Подготовка, встреча, стратегия покупки, критерии, риски, первичная экономика и follow-up.</p><a class="button gold" href="#contact">Обсудить диагностику</a></article><article class="format"><span class="badge">Глубокий разбор</span><h3>Карта покупки 360°</h3><span class="price">от&nbsp;180&nbsp;000&nbsp;₽</span><p>Разбор 2–5 объектов: матрица решений, полная стоимость, сценарии сделки, риски и следующий шаг.</p><a class="button" href="#contact">Записаться на 360°</a></article><article class="format"><span class="badge">До сделки</span><h3>Сопровождение покупки</h3><span class="price">от&nbsp;2–3%</span><p>Подбор, проверка, переговоры, условия, бронь, ипотека/рассрочка, документы и сделка.</p><a class="button" href="#contact">Обсудить сопровождение</a></article></div><div class="actions"><a class="button dark" href="/formats/">Все форматы и стоимость</a></div></div>
     </section>
 
     <section id="cases" class="section-light">
-      <div class="wrap"><div class="section-head wide-copy"><div class="eyebrow">Кейсы</div><h2>Кейсы по типам клиентов и задач</h2><p>Обезличенные примеры показывают ход мышления: задача, риск, инструмент и следующий шаг. Без персональных данных и без обещаний гарантированной выгоды.</p></div><div class="grid4"><a class="case-card featured" href="/client-cases/flat-choice-strategy/search-chaos-cost.html"><span class="badge">Новый кейс · цена хаоса</span><h3>Клиент тонет в звонках, ссылках и презентациях</h3><div class="case-line"><b>Риск</b><span>Месяцы поиска, десятки ссылок и решение “на усталости”.</span></div><div class="case-line"><b>Метод</b><span>Единая матрица объектов, фильтр критериев, карта экономики и 2–3 сценария.</span></div><span class="case-link">Смотреть презентацию</span></a><a class="case-card" href="/client-cases/flat-choice-strategy/"><span class="badge">Стратегия выбора</span><h3>Новостройка, вторичка или ремонт</h3><div class="case-line"><b>Метод</b><span>Светофор критериев и матрица решений.</span></div><span class="case-link">Смотреть кейс</span></a><a class="case-card" href="/cases/family-purchase/"><span class="badge">Семья · до 35 млн ₽</span><h3>Семейная покупка без хаоса</h3><div class="case-line"><b>Метод</b><span>Карта требований семьи и согласованный следующий шаг.</span></div><span class="case-link">Смотреть кейс</span></a><a class="case-card" href="/cases/certificate-roadmap/"><span class="badge">Сертификат</span><h3>Сложная сделка с целевыми деньгами</h3><div class="case-line"><b>Метод</b><span>Маршрут применения денег и проверка объекта до бронирования.</span></div><span class="case-link">Смотреть кейс</span></a></div><div class="actions"><a class="button gold" href="/cases/">Все кейсы</a><a class="button dark" href="/system/">Как работает система</a></div></div>
+      <div class="wrap"><div class="section-head wide-copy"><div class="eyebrow">Кейсы</div><h2>Кейсы по типам клиентов и задач</h2><p>Обезличенные примеры показывают ход мышления: задача, риск, инструмент и следующий шаг. Без персональных данных и без обещаний гарантированной выгоды.</p></div><div class="grid4"><a class="case-card featured" href="/client-cases/flat-choice-strategy/search-chaos-cost.html"><span class="badge">Новый кейс · цена хаоса</span><h3>Клиент тонет в звонках, ссылках и презентациях</h3><div class="case-line"><b>Риск</b><span>Месяцы поиска, десятки ссылок и решение “на усталости”.</span></div><div class="case-line"><b>Метод</b><span>Единая матрица объектов, фильтр критериев, карта экономики и <span class="nowrap">2–3 сценария</span>.</span></div><span class="case-link">Смотреть презентацию</span></a><a class="case-card" href="/client-cases/flat-choice-strategy/"><span class="badge">Стратегия выбора</span><h3>Новостройка, вторичка или ремонт</h3><div class="case-line"><b>Метод</b><span>Светофор критериев и матрица решений.</span></div><span class="case-link">Смотреть кейс</span></a><a class="case-card" href="/cases/family-purchase/"><span class="badge">Семья · до 35 млн ₽</span><h3>Семейная покупка без хаоса</h3><div class="case-line"><b>Метод</b><span>Карта требований семьи и согласованный следующий шаг.</span></div><span class="case-link">Смотреть кейс</span></a><a class="case-card" href="/cases/certificate-roadmap/"><span class="badge">Сертификат</span><h3>Сложная сделка с целевыми деньгами</h3><div class="case-line"><b>Метод</b><span>Маршрут применения денег и проверка объекта до бронирования.</span></div><span class="case-link">Смотреть кейс</span></a></div><div class="actions"><a class="button gold" href="/cases/">Все кейсы</a><a class="button dark" href="/system/">Как работает система</a></div></div>
     </section>
 
     <section id="media" class="section-dark">
       <div class="wrap media-box"><div><a class="media-preview" href="https://www.1tv.ru/shows/dobroe-utro/pro-dengi/vy-v-otpusk-a-my-na-rasprodazhu-dobroe-utro-fragment-vypuska-ot-26-06-2026" target="_blank" rel="noopener" aria-label="Смотреть комментарий Павла Леонтьева на сайте Первого канала"><img src="assets/media-poster.svg?v=poster-typography-20260701" alt="Постер комментария Павла Леонтьева на Первом канале" loading="lazy"><span class="play-button">▶</span></a><p class="media-note">Фрагмент эфира. Комментарий начинается примерно с 2:12.</p></div><div class="media-content"><div class="eyebrow">СМИ</div><h2>Павел Леонтьев в программе «Доброе утро»</h2><p>Комментарий для Первого канала о скидках на новостройки и реальной выгоде покупателя.</p><p>Главная мысль эфира: скидка в рекламе и настоящая экономия — не одно и то же. Перед покупкой важно считать цену метра, условия оплаты, срок сдачи, платежи, ремонт, риски и будущую ликвидность.</p><div class="actions"><a class="button gold" href="https://www.1tv.ru/shows/dobroe-utro/pro-dengi/vy-v-otpusk-a-my-na-rasprodazhu-dobroe-utro-fragment-vypuska-ot-26-06-2026" target="_blank" rel="noopener">Смотреть комментарий с 2:12</a><a class="button dark" href="#contact">Получить разбор объекта</a></div></div></div>
     </section>
 
-    <section id="formats" class="section-light">
-      <div class="wrap"><div class="section-head wide-copy"><div class="eyebrow">Форматы и стоимость</div><h2>Вы платите не за разговор. Вы платите за управляемость покупки.</h2><p>Платная работа начинается не с 40 минут общения, а с подготовки, анализа рынка, проверки объектов, встречи, follow-up, дорожной карты и координации следующих шагов.</p></div><div class="formats"><article class="format"><span class="badge">10–15 минут</span><h3>Первичный созвон</h3><span class="price">Бесплатно</span><p>Понять задачу, бюджет, срочность и подходит ли мой формат.</p><a class="button" href="#contact">Записаться</a></article><article class="format featured"><span class="recommended">Минимальный платный формат</span><h3>Стратегическая диагностика</h3><span class="price">от&nbsp;100&nbsp;000&nbsp;₽</span><p>Подготовка, встреча, стратегия покупки, критерии, риски, первичная экономика и follow-up.</p><a class="button gold" href="#contact">Обсудить диагностику</a></article><article class="format"><span class="badge">Глубокий разбор</span><h3>Карта покупки 360°</h3><span class="price">от&nbsp;180&nbsp;000&nbsp;₽</span><p>Разбор 2–5 объектов: матрица решений, полная стоимость, сценарии сделки, риски и следующий шаг.</p><a class="button" href="#contact">Записаться на 360°</a></article><article class="format"><span class="badge">До сделки</span><h3>Сопровождение покупки</h3><span class="price">от&nbsp;2–3%</span><p>Подбор, проверка, переговоры, условия, бронь, ипотека/рассрочка, документы и сделка.</p><a class="button" href="#contact">Обсудить сопровождение</a></article></div><div class="actions"><a class="button dark" href="/formats/">Все форматы и стоимость</a></div></div>
-    </section>
 
     <section id="contact" class="contact">
       <img class="brand-watermark" src="assets/brand/logo-mark-gold.svg?v=buyer-concierge-20260702" alt="" aria-hidden="true">
