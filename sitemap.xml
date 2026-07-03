@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://leontev.pro/</loc></url>
+  <url><loc>https://leontev.pro/chaos/</loc></url>
+  <url><loc>https://leontev.pro/contact/</loc></url>
   <url><loc>https://leontev.pro/method/</loc></url>
   <url><loc>https://leontev.pro/method/choice-map/</loc></url>
   <url><loc>https://leontev.pro/method/time-economy/</loc></url>
@@ -17,5 +19,6 @@
   <url><loc>https://leontev.pro/cases/smart-garden/</loc></url>
   <url><loc>https://leontev.pro/cases/certificate-roadmap/</loc></url>
   <url><loc>https://leontev.pro/formats/</loc></url>
-  <url><loc>https://leontev.pro/presentations/</loc></url>
+  <url><loc>https://leontev.pro/client-cases/flat-choice-strategy/</loc></url>
+  <url><loc>https://leontev.pro/client-cases/flat-choice-strategy/search-chaos-cost.html</loc></url>
 </urlset>
