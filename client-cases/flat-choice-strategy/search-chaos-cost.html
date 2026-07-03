@@ -79,10 +79,36 @@
     .light .metric-label,.light .metric-number{color:#b68a3a}
     .light .metric-unit{color:var(--ink)}
 
-    .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:28px}
-    .flow div{min-height:90px;padding:18px;border-radius:24px;border:1px solid var(--line);background:rgba(255,255,255,.06);display:grid;align-content:center;font-weight:900;text-align:center}
-    .flow div:after{content:"↓";display:block;color:var(--gold2);font-size:24px;margin-top:6px}
-    .flow div:last-child:after{content:"✓"}
+    .noise-cloud{position:relative;min-height:292px;margin-top:30px;overflow:visible}
+    .noise-item{position:absolute;z-index:2;display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:0 18px;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.045));border:1px solid rgba(242,217,143,.22);box-shadow:0 18px 44px rgba(0,0,0,.22);font-size:15px;font-weight:900;color:var(--cream);transform:rotate(var(--r));white-space:nowrap}
+    .noise-item.is-hot{border-color:rgba(255,140,140,.36);background:linear-gradient(180deg,rgba(255,140,140,.10),rgba(255,255,255,.045))}
+    .noise-item.is-gold{border-color:rgba(242,217,143,.42);box-shadow:0 18px 44px rgba(216,181,108,.12),0 18px 44px rgba(0,0,0,.22)}
+    .noise-icon{position:relative;display:inline-block;flex:0 0 auto;width:18px;height:18px;color:var(--gold2);opacity:.9}
+    .noise-icon:before,.noise-icon:after{content:"";position:absolute;display:block}
+    .ico-megaphone:before{left:1px;top:5px;width:11px;height:8px;border:2px solid currentColor;border-radius:3px;transform:skewX(-12deg)}
+    .ico-megaphone:after{right:0;top:2px;width:5px;height:14px;border-right:2px solid currentColor;border-radius:50%}
+    .ico-phone:before{left:3px;top:2px;width:12px;height:12px;border:2px solid currentColor;border-top-color:transparent;border-right-color:transparent;border-radius:50%;transform:rotate(-36deg)}
+    .ico-phone:after{left:5px;top:12px;width:8px;height:3px;background:currentColor;border-radius:999px;transform:rotate(22deg)}
+    .ico-file:before{left:3px;top:1px;width:12px;height:16px;border:2px solid currentColor;border-radius:3px}
+    .ico-file:after{right:3px;top:1px;width:6px;height:6px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;background:var(--bg)}
+    .ico-chat:before{left:1px;top:3px;width:16px;height:12px;border:2px solid currentColor;border-radius:7px}
+    .ico-chat:after{left:5px;bottom:0;width:7px;height:7px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-35deg)}
+    .ico-link:before,.ico-link:after{width:10px;height:7px;border:2px solid currentColor;border-radius:999px;top:5px}
+    .ico-link:before{left:0;transform:rotate(-30deg)}
+    .ico-link:after{right:0;transform:rotate(-30deg)}
+    .ico-bank:before{left:1px;top:4px;width:16px;height:3px;background:currentColor;box-shadow:0 10px 0 currentColor}
+    .ico-bank:after{left:3px;top:0;width:12px;height:12px;border-left:3px solid currentColor;border-right:3px solid currentColor;transform:skewX(-12deg)}
+    .ico-sofa:before{left:2px;top:7px;width:14px;height:8px;border:2px solid currentColor;border-radius:6px 6px 3px 3px}
+    .ico-sofa:after{left:0;top:11px;width:18px;height:5px;background:currentColor;border-radius:5px}
+    .ico-warning:before{left:2px;top:1px;width:14px;height:14px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);border-radius:2px}
+    .ico-warning:after{left:8px;top:6px;width:2px;height:7px;background:currentColor;border-radius:999px;box-shadow:0 9px 0 currentColor}
+    .noise-line{position:absolute;z-index:1;height:1px;background:linear-gradient(90deg,transparent,rgba(242,217,143,.38),transparent);transform-origin:left center;opacity:.72}
+    .noise-center{position:relative;z-index:3;width:min(100%,540px);margin:10px auto 0;padding:24px 28px;border-radius:26px;text-align:center;background:radial-gradient(circle at 50% 0%,rgba(216,181,108,.18),rgba(255,255,255,.055));border:1px solid rgba(242,217,143,.36);box-shadow:0 24px 70px rgba(0,0,0,.28),0 0 44px rgba(216,181,108,.10)}
+    .noise-center:before{content:"";position:absolute;left:50%;top:-52px;width:1px;height:52px;background:linear-gradient(180deg,transparent,rgba(242,217,143,.42));transform:translateX(-50%)}
+    .noise-center small{display:block;margin-bottom:8px;color:var(--gold2);font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+    .noise-center strong{display:block;font-size:clamp(26px,3vw,38px);line-height:1;font-weight:900;letter-spacing:-.05em}
+    .noise-center span{display:block;margin-top:10px;color:var(--muted);font-size:16px;font-weight:800}
+    .noise-lead{max-width:760px;margin-top:28px}
 
     .compare{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
     .compare .card:first-child{border-color:rgba(255,140,140,.32)}
@@ -123,7 +149,7 @@
       .nav{display:none}
       .slide,.slide.compact{min-height:auto;padding:58px 0}
       .slide:before{font-size:76px;top:18px;right:18px}
-      .g3,.g4,.flow,.compare,.road,.metric-grid{grid-template-columns:1fr}
+      .g3,.g4,.compare,.road,.metric-grid{grid-template-columns:1fr}
       .road{gap:12px}
       .road div{min-height:0;border-radius:22px}
       .metric-card{min-height:0}
@@ -132,6 +158,14 @@
       h2{font-size:34px;line-height:1.04}
       .lead{font-size:17px}
       .card{padding:22px}
+    }
+
+    @media(max-width:720px){
+      .noise-cloud{min-height:auto;display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;overflow:visible}
+      .noise-item{position:relative;left:auto!important;top:auto!important;transform:none;min-height:50px;flex:1 1 calc(50% - 10px);white-space:normal}
+      .noise-line{display:none}
+      .noise-center{margin-top:18px}
+      .noise-center:before{display:none}
     }
 
     @media(max-width:640px){
@@ -163,6 +197,11 @@
       .road div{padding:18px}
       .step-num{margin-bottom:12px}
       .road b{font-size:18px}
+    }
+
+    @media(max-width:430px){
+      .noise-item{flex-basis:100%}
+      .noise-center{padding:22px 18px}
     }
   </style>
 </head>
@@ -199,12 +238,35 @@
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide" id="incoming-chaos">
       <div class="wrap">
         <div class="kicker">Как это выглядит</div>
         <h2>Звонки, чаты, ссылки, дубли и потеря фокуса</h2>
-        <div class="flow"><div>Реклама ЖК</div><div>Звонок агента</div><div>Презентация</div><div>Новый чат</div><div>Ещё 10 ссылок</div></div>
-        <p class="lead">Проблема не в том, что мало информации. Проблема в том, что информации слишком много, а единой логики выбора нет.</p>
+        <div class="noise-cloud" aria-label="Поток входящих сигналов при самостоятельном поиске квартиры">
+          <span class="noise-line" style="left:16%;top:78%;width:27%;transform:rotate(32deg)"></span>
+          <span class="noise-line" style="left:33%;top:28%;width:27%;transform:rotate(68deg)"></span>
+          <span class="noise-line" style="left:52%;top:44%;width:23%;transform:rotate(112deg)"></span>
+          <span class="noise-line" style="left:70%;top:70%;width:22%;transform:rotate(148deg)"></span>
+          <span class="noise-line" style="left:9%;top:47%;width:39%;transform:rotate(18deg)"></span>
+          <span class="noise-line" style="left:43%;top:70%;width:18%;transform:rotate(90deg)"></span>
+
+          <span class="noise-item is-gold" style="left:2%;top:20px;--r:-2.2deg"><i class="noise-icon ico-megaphone"></i>Реклама ЖК</span>
+          <span class="noise-item" style="left:27%;top:0;--r:2.4deg"><i class="noise-icon ico-phone"></i>Звонок агента</span>
+          <span class="noise-item" style="left:56%;top:26px;--r:-2deg"><i class="noise-icon ico-phone"></i>Ещё один звонок</span>
+          <span class="noise-item is-hot" style="left:77%;top:58px;--r:2.6deg"><i class="noise-icon ico-warning"></i>Акция до завтра</span>
+          <span class="noise-item" style="left:11%;top:106px;--r:2.2deg"><i class="noise-icon ico-file"></i>Презентация</span>
+          <span class="noise-item is-gold" style="left:38%;top:96px;--r:-2.8deg"><i class="noise-icon ico-chat"></i>Новый чат</span>
+          <span class="noise-item" style="left:61%;top:124px;--r:1.5deg"><i class="noise-icon ico-link"></i>20 ссылок</span>
+          <span class="noise-item" style="left:4%;top:190px;--r:-1.6deg"><i class="noise-icon ico-file"></i>Дубли</span>
+          <span class="noise-item" style="left:32%;top:192px;--r:1.9deg"><i class="noise-icon ico-bank"></i>Ипотека «от…»</span>
+          <span class="noise-item is-hot" style="left:70%;top:198px;--r:-1.8deg"><i class="noise-icon ico-sofa"></i>Ремонт не посчитан</span>
+        </div>
+        <div class="noise-center">
+          <small>центр давления</small>
+          <strong>Входящий шум</strong>
+          <span>много сигналов, но нет единой системы выбора</span>
+        </div>
+        <p class="lead noise-lead">Проблема не в том, что мало информации.<br>Проблема в том, что информации слишком много,<br>а единой логики выбора нет.</p>
       </div>
     </section>
 
