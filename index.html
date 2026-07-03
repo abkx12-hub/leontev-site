@@ -161,9 +161,12 @@
     .roadmap-num { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 34px; padding: 0 8px; border-radius: 999px; border: 1px solid rgba(229,201,129,.42); color: var(--gold2); font-size: 12px; font-weight: 900; background: rgba(8,16,24,.44); }
     .roadmap-step h3 { margin: 10px 0 7px; font-size: 18px; line-height: 1.05; letter-spacing: -.035em; }
     .roadmap-step p { margin: 0; color: #cbd5e2; font-size: 14px; line-height: 1.35; }
-    .roadmap-note { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(250px, .65fr); gap: 18px; align-items: center; margin-top: 24px; padding: 24px 28px; border-radius: 28px; border: 1px solid rgba(229,201,129,.28); background: linear-gradient(135deg, rgba(229,201,129,.15), rgba(255,255,255,.045)); }
+    .roadmap-note { display: block; margin-top: 24px; padding: 24px 28px; border-radius: 28px; border: 1px solid rgba(229,201,129,.28); background: linear-gradient(135deg, rgba(229,201,129,.15), rgba(255,255,255,.045)); }
     .roadmap-note p { margin: 0; color: #e0e8f2; font-size: 18px; }
     .roadmap-note b { color: var(--gold2); }
+    .route-chain { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; max-width: 100%; }
+    .route-step { display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid rgba(229,201,129,.26); background: rgba(255,255,255,.055); color: #f1e8da; font-size: 14px; font-weight: 900; white-space: nowrap; }
+    .route-step + .route-step:before { content: "→"; margin-right: 10px; color: var(--gold2); opacity: .92; }
     .roadmap-price { justify-self: end; text-align: right; color: #dce6f2; }
     .roadmap-price span { display: block; color: var(--muted); font-size: 12px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
     .roadmap-price b { display: block; margin-top: 4px; color: var(--gold2); font-size: clamp(24px, 2.3vw, 32px); line-height: 1.05; }
@@ -217,7 +220,6 @@
     .price { display: block; color: var(--gold); font-size: clamp(28px, 2.6vw, 40px); font-weight: 900; line-height: 1.04; letter-spacing: -.045em; text-wrap: nowrap; }
     .recommended { display: inline-flex; width: max-content; max-width: 100%; min-height: 28px; align-items: center; padding: 0 10px; border-radius: 999px; background: rgba(183, 138, 58, .13); border: 1px solid rgba(183, 138, 58, .28); color: #7b5a20; font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
     .format .button { margin-top: auto; }
-
     .case-card { display: flex; flex-direction: column; gap: 12px; min-height: 390px; }
     .case-card.featured { background: linear-gradient(145deg, #172637, #0b121b); color: #fff; border-color: rgba(229, 201, 129, .36); }
     .case-line { border-top: 1px solid rgba(229, 201, 129, .16); padding-top: 10px; }
@@ -323,7 +325,10 @@
       .roadmap-step:before { content: ""; position: absolute; left: -22px; top: 26px; width: 11px; height: 11px; border-radius: 50%; background: var(--gold2); box-shadow: 0 0 0 5px rgba(229,201,129,.14); }
       .roadmap-step:after { display: none; }
       .roadmap-step h3 { font-size: 20px; }
-      .roadmap-note { grid-template-columns: 1fr; padding: 20px; }
+      .roadmap-note { padding: 20px; }
+      .route-chain { gap: 8px; }
+      .route-step { min-height: 32px; padding: 0 10px; font-size: 13px; }
+      .route-step + .route-step:before { margin-right: 8px; }
       .roadmap-price { justify-self: start; text-align: left; }
       .value-column, .deliverable-card { padding: 22px; }
       .value-column h3 { font-size: 28px; }
@@ -386,7 +391,7 @@
       <div class="wrap">
         <div class="section-head wide-copy"><div class="eyebrow">Дорожная карта</div><h2>Как работает консьерж-сервис</h2><p>Покупка идёт не через хаотичный поток звонков, а по маршруту: от стратегии до сделки, приёмки, ремонта и мебели.</p></div>
         <div class="roadmap-track" aria-label="Маршрут покупки"><article class="roadmap-step"><span class="roadmap-num">01</span><h3>Диагностика</h3><p>цель, бюджет, срок</p></article><article class="roadmap-step"><span class="roadmap-num">02</span><h3>Стратегия</h3><p>сценарий покупки</p></article><article class="roadmap-step"><span class="roadmap-num">03</span><h3>Критерии</h3><p>что важно и что отсечь</p></article><article class="roadmap-step"><span class="roadmap-num">04</span><h3>Финальные варианты</h3><p><span class="nowrap">2–3&nbsp;сценария</span></p></article><article class="roadmap-step"><span class="roadmap-num">05</span><h3>Экономика</h3><p>полная стоимость</p></article><article class="roadmap-step"><span class="roadmap-num">06</span><h3>Проверка</h3><p>условия и риски</p></article><article class="roadmap-step"><span class="roadmap-num">07</span><h3>Сделка</h3><p>бронь и документы</p></article><article class="roadmap-step"><span class="roadmap-num">08</span><h3>После покупки</h3><p>приёмка, ремонт, мебель</p></article></div>
-        <div class="roadmap-note"><p><b>Консьерж-сервис при покупке квартиры</b> — это один контакт, управляемый маршрут и понятный следующий шаг: стратегия → финальные варианты → экономика → риски → сделка → приёмка → ремонт → мебель.</p></div>
+        <div class="roadmap-note"><p><b>Консьерж-сервис при покупке квартиры</b> — это один контакт, управляемый маршрут и понятный следующий шаг.</p><div class="route-chain" aria-label="Маршрут консьерж-сервиса"><span class="route-step">Стратегия</span><span class="route-step">Финальные варианты</span><span class="route-step">Экономика</span><span class="route-step">Риски</span><span class="route-step">Сделка</span><span class="route-step">Приёмка</span><span class="route-step">Ремонт и мебель</span></div></div>
       </div>
     </section>
 
