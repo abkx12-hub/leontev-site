@@ -34,6 +34,7 @@
     .btn.gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#151008;border-color:rgba(242,217,143,.78)}
     .deck{counter-reset:slide}
     .slide{counter-increment:slide;position:relative;overflow:hidden;min-height:calc(100vh - 72px);padding:76px 0;border-bottom:1px solid rgba(242,217,143,.14);display:flex;align-items:center;background:radial-gradient(circle at 80% 10%,rgba(242,217,143,.06),transparent 34%)}
+    .slide.compact{min-height:auto;padding:92px 0}
     .slide:before{content:'0' counter(slide);position:absolute;right:4vw;top:34px;color:rgba(242,217,143,.13);font-size:118px;font-weight:900;line-height:1;letter-spacing:-.08em;pointer-events:none}
     .slide.light{background:linear-gradient(135deg,#f4ead8,#eadbc3);color:#16202c}
     .slide.light:before{color:rgba(184,138,58,.12)}
@@ -85,11 +86,11 @@
     .green{background:rgba(137,224,178,.13);color:#c9f7de;border:1px solid rgba(137,224,178,.34)}
     .matrix-summary{margin-top:18px;padding:18px 20px;border-radius:22px;background:rgba(255,255,255,.07);border:1px solid var(--line);color:var(--muted);font-weight:800;max-width:980px}
     .matrix-summary b{color:var(--gold2)}
-    .road{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:30px;min-width:0}
-    .road div{position:relative;min-width:0;padding:24px 20px;border-top:3px solid var(--gold);background:rgba(255,255,255,.055);border-right:1px solid rgba(242,217,143,.14)}
-    .road div:first-child{border-radius:24px 0 0 24px}
-    .road div:last-child{border-radius:0 24px 24px 0;border-right:0}
-    .road b{display:block;color:var(--gold2);margin-bottom:8px}
+    .road{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:32px;min-width:0}
+    .road div{position:relative;min-width:0;min-height:154px;padding:22px 20px 24px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.045));box-shadow:0 18px 46px rgba(0,0,0,.16)}
+    .step-num{display:inline-flex;align-items:center;justify-content:center;width:38px;height:30px;margin-bottom:16px;border-radius:999px;border:1px solid rgba(242,217,143,.38);color:var(--gold2);font-size:12px;font-weight:900;letter-spacing:.08em}
+    .road b{display:block;color:var(--cream);font-size:20px;line-height:1.12;letter-spacing:-.035em;margin-bottom:10px}
+    .road span:last-child{display:block;color:var(--muted);font-size:15px;font-weight:800;line-height:1.35;text-wrap:pretty}
     .logo-hero{width:min(170px,34vw);margin-bottom:26px;opacity:.95}
     .light h1,.light h2,.light h3{color:#16202c}
     .light .lead,.light .card p,.light .card li{color:#5d6878}
@@ -97,6 +98,10 @@
     .light .kicker{color:#b68a3a}
     .light .kicker:before{background:#b68a3a}
     .light .big{color:#b68a3a}
+    .light .road div{background:rgba(255,255,255,.72);border-color:rgba(23,32,43,.1);box-shadow:0 18px 46px rgba(23,32,43,.10)}
+    .light .road b{color:#16202c}
+    .light .road span:last-child{color:#455366}
+    .light .step-num{color:#8a672f;background:#fff4d7;border-color:rgba(184,138,58,.3)}
     .light .matrix{background:#fffaf1;border-color:rgba(23,32,43,.1);box-shadow:0 18px 46px rgba(23,32,43,.08)}
     .light th{color:#8a672f;background:rgba(184,138,58,.12);border-bottom:1px solid rgba(184,138,58,.18)}
     .light td{color:#2d3744;border-bottom:1px solid rgba(23,32,43,.08);font-weight:700}
@@ -109,13 +114,15 @@
     .light .matrix-summary b{color:#8a672f}
     .quote{max-width:1000px;padding:34px;border-radius:34px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(242,217,143,.16),rgba(255,255,255,.06));font-size:clamp(24px,3vw,40px);line-height:1.2;font-weight:900;letter-spacing:-.04em}
     .footer{padding:28px 0;color:rgba(247,240,227,.62);font-size:14px}
-    @media(min-width:1280px){.slide{min-height:760px}}
+    @media(min-width:1280px){.slide{min-height:760px}.slide.compact{min-height:auto}}
     @media(max-width:920px){
       .nav{display:none}
       .slide{min-height:auto;padding:58px 0}
+      .slide.compact{padding:58px 0}
       .slide:before{font-size:76px;top:18px;right:18px}
       .g2,.g3,.g4,.flow,.compare,.road{grid-template-columns:1fr}
-      .road div,.road div:first-child,.road div:last-child{border-radius:22px;border-right:0;border-top:1px solid var(--line)}
+      .road{gap:12px}
+      .road div,.road div:first-child,.road div:last-child{min-height:0;border-radius:22px;border:1px solid rgba(23,32,43,.1)}
       h1{font-size:42px;line-height:1}
       h2{font-size:34px;line-height:1.04}
       .lead{font-size:17px}
@@ -127,6 +134,7 @@
       .wrap{width:calc(100% - 28px)}
       .brand{max-width:100%}
       .slide{padding:50px 0}
+      .slide.compact{padding:50px 0}
       .slide:before{font-size:58px;right:14px;top:14px}
       .kicker{font-size:11px;letter-spacing:.13em;gap:9px}
       .kicker:before{width:28px}
@@ -149,6 +157,9 @@
       .matrix td:nth-child(4)::before{content:'Следующий шаг'}
       .matrix td:last-child{padding-bottom:0}
       .matrix-summary{padding:16px;border-radius:20px;font-size:15px}
+      .road div{padding:18px}
+      .step-num{margin-bottom:12px}
+      .road b{font-size:18px}
     }
   </style>
 </head>
@@ -261,17 +272,17 @@
       </div>
     </section>
 
-    <section class='slide light' id='method'>
+    <section class='slide light compact' id='method'>
       <div class='wrap'>
         <div class='kicker'>Что делает эксперт</div>
         <h2>Структура вместо хаоса</h2>
         <p class='lead'>Задача эксперта — не прислать ещё 20 ссылок, а собрать покупку как управляемый проект.</p>
         <div class='road'>
-          <div><b>01 Диагностика</b><span>цель, бюджет, участники</span></div>
-          <div><b>02 Фильтр</b><span>критерии и красные зоны</span></div>
-          <div><b>03 Матрица</b><span>объекты по одной логике</span></div>
-          <div><b>04 Экономика</b><span>полная стоимость решения</span></div>
-          <div><b>05 Сделка</b><span>маршрут и контроль</span></div>
+          <div><span class='step-num'>01</span><b>Диагностика</b><span>цель, бюджет, участники решения</span></div>
+          <div><span class='step-num'>02</span><b>Фильтр</b><span>критерии и красные зоны</span></div>
+          <div><span class='step-num'>03</span><b>Матрица</b><span>объекты сравниваются по одной логике</span></div>
+          <div><span class='step-num'>04</span><b>Экономика</b><span>полная стоимость решения</span></div>
+          <div><span class='step-num'>05</span><b>Сделка</b><span>маршрут, условия и контроль</span></div>
         </div>
       </div>
     </section>
@@ -287,7 +298,7 @@
       </div>
     </section>
 
-    <section class='slide light'>
+    <section class='slide light compact'>
       <div class='wrap'>
         <div class='kicker'>Матрица решений</div>
         <h2>Каждый объект получает статус, а не просто место в списке</h2>
