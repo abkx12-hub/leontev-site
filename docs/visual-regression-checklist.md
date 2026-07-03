@@ -76,18 +76,21 @@ document.documentElement.scrollWidth > window.innerWidth + 2
 
 ## Последний отчёт по правке 2026-07-03
 
-Проверено и исправлено на главной:
+Проверено и исправлено:
 
-- header-логотип — CSS fallback `ПЛ`, без изображения в шапке;
-- roadmap: desktop 4 + 4, mobile vertical timeline;
-- formats: desktop 3 + 2, tablet 2 колонки, mobile 1 колонка;
-- cost stats: 2 × 2, текст `2–4 просмотра`;
-- добавлено правило скрытия пустых кнопок;
-- добавлен alias `#search-cost` и новый id `#cost-of-chaos`;
-- добавлен footer с Method / Cases / Formats / Contacts и контактами;
+- главная: header-логотип — CSS fallback `ПЛ`, без изображения в шапке;
+- главная: roadmap — desktop 4 + 4, mobile vertical timeline;
+- главная: formats — desktop 3 + 2, tablet 2 колонки, mobile 1 колонка;
+- главная: cost stats — 2 × 2, текст `2–4 просмотра`;
+- главная: добавлено правило скрытия пустых кнопок;
+- главная: добавлен alias `#search-cost` и новый id `#cost-of-chaos`;
+- главная: добавлен footer с Method / Cases / Formats / Contacts и контактами;
+- `/formats/`: убраны `buyer-concierge` и “личный штаб” из title/description/ключевого заголовка;
+- добавлены маршруты `/chaos/` и `/contact/`;
+- sitemap обновлён: draft `/presentations/` убран, активные маршруты добавлены;
 - создана документация `docs/site-map.md` и `docs/cta-map.md`.
 
 Осталось держать на контроле:
 
-- глубокие страницы `/method/`, `/formats/`, `/cases/` ещё содержат отдельные старые формулировки вроде `shortlist` или “личный штаб”; они не должны становиться основным позиционированием сайта;
+- глубокие страницы `/method/` и `/cases/` ещё содержат отдельные старые формулировки вроде `shortlist` или “личный штаб”; они не должны становиться основным позиционированием сайта;
 - `/presentations/` и `/client-presentations/` остаются служебными/draft-разделами и не должны попадать в главное меню.
