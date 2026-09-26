@@ -1,457 +1,68 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Консьерж-сервис по покупке новостроек — Павел Леонтьев</title>
-  <meta name="description" content="Павел Леонтьев — советник по покупке новостроек и руководитель экспертного сопровождения. Консьерж-сервис по покупке новостроек бизнес- и премиум-класса: стратегия, команда экспертов, внутренний стандарт разбора и сделка.">
-  <link rel="canonical" href="https://leontev.pro/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Консьерж-сервис по покупке новостроек — Павел Леонтьев">
-  <meta property="og:description" content="Один контакт, команда под задачу и внутренний стандарт экспертного разбора для покупки новостроек бизнес- и премиум-класса.">
-  <meta property="og:url" content="https://leontev.pro/">
-  <meta property="og:image" content="https://leontev.pro/pavel-photo.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <style>
-    :root {
-      --ink: #071018;
-      --navy: #101b27;
-      --navy2: #172637;
-      --cream: #f3eadb;
-      --paper: #fffaf1;
-      --gold: #b88a3a;
-      --gold2: #e5c981;
-      --muted: #9ca8b8;
-      --text: #16202c;
-      --soft: #657184;
-      --line: rgba(229, 201, 129, .28);
-      --max: 1420px;
-    }
-
-    * { box-sizing: border-box; min-width: 0; }
-    html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; }
-    body { margin: 0; max-width: 100%; position: relative; background: var(--ink); color: #f7f0e3; font-family: Arial, "Helvetica Neue", sans-serif; line-height: 1.58; overflow-x: hidden; }
-    a { color: inherit; text-decoration: none; }
-    img, svg, video { display: block; max-width: 100%; height: auto; }
-    .wrap { width: min(var(--max), calc(100% - 48px)); margin: auto; min-width: 0; }
-    .narrow { max-width: 980px; }
-    .wide-copy { max-width: 1120px; }
-    .nowrap { white-space: nowrap; }
-    .desktop-only { display: initial; }
-    h1, h2, h3 { text-wrap: balance; }
-    .price, .stat-number, .nowrap, .term { white-space: nowrap; }
-    .text-balance, .card-title { text-wrap: balance; }
-    .section-lead { max-width: 980px; line-height: 1.45; text-wrap: balance; }
-    .lead-split { max-width: 980px; line-height: 1.45; }
-    .card-copy { line-height: 1.45; }
-    .logo-fallback { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; border: 1px solid rgba(244,220,154,.45); color: #f4dc9a; font-weight: 900; background: rgba(255,255,255,.04); }
-
-    .nav { position: sticky; top: 0; z-index: 30; background: rgba(8, 16, 24, .93); border-bottom: 1px solid rgba(229, 201, 129, .14); backdrop-filter: blur(18px); }
-    .navin { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 18px; min-width: 0; }
-    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; font-size: 18px; font-weight: 900; letter-spacing: -.04em; }
-    .brand > span:not(.brand-mark) { min-width: 0; }
-    .brand-mark { width: 42px; height: 42px; flex: 0 0 42px; border-radius: 13px; display: grid; place-items: center; background: #07111d; color: var(--gold2); border: 1px solid rgba(229, 201, 129, .42); font-size: 15px; font-weight: 900; letter-spacing: -.08em; line-height: 1; box-shadow: 0 8px 18px rgba(229, 201, 129, .12), inset 0 1px 0 rgba(255, 255, 255, .07); }
-    .brand small { display: block; color: var(--muted); font-size: 11px; letter-spacing: .04em; line-height: 1.25; }
-    .links { display: flex; gap: 14px; color: #c7d0dc; font-size: 14px; font-weight: 800; }
-    .links a:hover { color: var(--gold2); }
-
-    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; max-width: 100%; padding: 0 22px; border: 1px solid rgba(229, 201, 129, .44); border-radius: 16px; background: rgba(255, 255, 255, .06); color: #fff; font-size: 14px; font-weight: 900; text-align: center; box-shadow: 0 14px 34px rgba(0, 0, 0, .18), inset 0 1px 0 rgba(255, 255, 255, .08); transition: transform .18s ease, border-color .18s ease; }
-    .button:hover { transform: translateY(-1px); border-color: rgba(229, 201, 129, .75); }
-    .button.gold { background: linear-gradient(135deg, #f0d78f, var(--gold)); color: #171308; border-color: rgba(229, 201, 129, .9); }
-    .button.dark { background: #101923; color: #fff; border-color: rgba(229, 201, 129, .24); }
-    .section-light .button:not(.gold):not(.dark), .format .button:not(.gold):not(.dark) { background: #fff; color: var(--text); border-color: rgba(184, 138, 58, .28); }
-    .button:empty, .btn:empty, .channel:empty { display: none !important; }
-    .button, .btn, .channel { overflow: hidden; text-overflow: ellipsis; }
-    .card, .case-card, .format, .replace-card, .compare-box, .loss-card, .roadmap-step, .value-column, .deliverable-card { max-width: 100%; overflow: hidden; }
-    .card p, .case-card p, .format p, .replace-card p, .compare-box p, .loss-card span, .roadmap-step p, .value-column p, .deliverable-card p { overflow-wrap: break-word; word-break: normal; hyphens: none; }
-
-    .eyebrow { color: var(--gold2); font-size: 12px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
-    .eyebrow:before { content: ""; display: inline-block; width: 34px; height: 1px; background: var(--gold2); vertical-align: middle; margin: 0 10px 3px 0; }
-    .section-light .eyebrow { color: var(--gold); }
-    .section-light .eyebrow:before { background: var(--gold); }
-
-    section { padding: 92px 0; overflow: hidden; }
-    .section-dark { background: linear-gradient(145deg, #101b27, #0b121b); color: #f7f0e3; }
-    .section-light { background: var(--cream); color: var(--text); }
-    .section-head { margin-bottom: 38px; position: relative; z-index: 1; }
-    .section-head h2 { margin: 14px 0; font-size: clamp(38px, 3.8vw, 58px); line-height: 1.04; letter-spacing: -.058em; text-wrap: balance; }
-    .section-head p { margin: 0; color: #b9c5d4; font-size: 18px; text-wrap: pretty; }
-    .section-light .section-head p, .section-light .card p, .section-light .case-card p, .section-light .case-line span, .section-light .format p, .section-light .card-copy { color: #5f6b7a; opacity: 1; }
-
-    .hero { position: relative; overflow: hidden; padding: 84px 0 78px; background: radial-gradient(circle at 78% 18%, rgba(229, 201, 129, .19), transparent 28%), linear-gradient(145deg, #070d13 0%, #101b27 54%, #0a1119 100%); }
-    .hero:before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(229, 201, 129, .06) 1px, transparent 1px), linear-gradient(0deg, rgba(229, 201, 129, .04) 1px, transparent 1px); background-size: 72px 72px; mask-image: linear-gradient(90deg, #000, transparent 80%); opacity: .48; }
-    .brand-watermark { position: absolute; right: 4%; top: 10%; width: min(34vw, 420px); opacity: .045; pointer-events: none; z-index: 0; mix-blend-mode: screen; }
-    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(300px, .88fr); gap: 56px; align-items: center; min-width: 0; }
-    .hero-grid > * { min-width: 0; }
-    .status-row { display: flex; flex-wrap: wrap; gap: 9px; margin: 17px 0; max-width: 100%; }
-    .pill { display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border: 1px solid rgba(229, 201, 129, .28); border-radius: 999px; background: rgba(255, 255, 255, .055); color: #e7d7b6; font-size: 11px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
-    .hero h1 { max-width: 980px; margin: 18px 0; font-size: clamp(46px, 5.2vw, 78px); line-height: .98; letter-spacing: -.067em; text-wrap: balance; }
-    .hero h1 span { display: block; color: var(--gold2); }
-    .sense { margin: 0 0 10px; color: var(--gold2); font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
-    .lead { max-width: 900px; color: #d0dae6; font-size: 20px; text-wrap: pretty; }
-    .hero-note { max-width: 850px; margin-top: 18px; padding: 18px 20px; border-radius: 22px; border: 1px solid rgba(229,201,129,.22); background: rgba(255,255,255,.055); color: #d8e1ec; font-size: 17px; }
-    .fact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 24px; max-width: 820px; }
-    .fact { min-width: 0; padding: 16px; border-radius: 18px; border: 1px solid rgba(229, 201, 129, .2); background: rgba(255, 255, 255, .055); color: #d8e1ec; }
-    .fact b { display: block; color: #fff; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; max-width: 100%; }
-    .contact-channels { display: flex; align-items: center; flex-wrap: wrap; gap: 9px 10px; margin-top: 16px; color: var(--muted); font-size: 13px; max-width: 100%; }
-    .channel-label { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 900; }
-    .channel { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; max-width: 100%; padding: 0 14px; border: 1px solid rgba(229, 201, 129, .24); border-radius: 14px; background: rgba(255, 255, 255, .06); font-weight: 800; }
-    .channel-wa { color: #98d5b2; }
-    .channel-max { color: #9bc2f0; }
-    .portrait-card { display: grid; gap: 16px; min-width: 0; }
-    .portrait-frame { position: relative; overflow: hidden; width: min(400px, 82vw); aspect-ratio: 4/5; margin-left: auto; border: 1px solid rgba(229, 201, 129, .42); border-radius: 34px; background: linear-gradient(145deg, #2b3541, #111922); box-shadow: 0 28px 70px rgba(0, 0, 0, .38), 0 0 0 10px rgba(229, 201, 129, .04); }
-    .portrait-frame img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.92) contrast(1.04); }
-    .portrait-frame:after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(8, 16, 24, .44)); }
-    .photo-caption { width: min(400px, 82vw); margin-left: auto; padding: 18px; border: 1px solid rgba(229, 201, 129, .22); border-radius: 22px; background: rgba(255, 255, 255, .06); color: #d7e0ec; }
-    .photo-caption b { display: block; color: #fff; }
-    .photo-caption span { font-size: 14px; color: #b8c4d3; }
-
-    .quick-nav { padding: 20px 0; background: #0b121b; border-top: 1px solid rgba(229, 201, 129, .14); border-bottom: 1px solid rgba(229, 201, 129, .14); overflow: hidden; }
-    .quick-nav-in { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; min-width: 0; }
-    .quick-nav-title { color: var(--gold2); font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
-    .quick-chips { display: flex; flex-wrap: wrap; gap: 9px; max-width: 100%; min-width: 0; }
-    .quick-chips a { display: inline-flex; align-items: center; min-height: 38px; padding: 0 14px; border: 1px solid rgba(229, 201, 129, .24); border-radius: 999px; background: rgba(255, 255, 255, .055); color: #d7e0ec; font-size: 13px; font-weight: 900; }
-    .quick-chips a:hover { border-color: rgba(229, 201, 129, .62); color: var(--gold2); }
-    .mobile-sticky-cta { display: none; }
-
-    .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; min-width: 0; }
-    .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; min-width: 0; }
-    .grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; min-width: 0; }
-    .grid2 > *, .grid3 > *, .grid4 > * { min-width: 0; }
-    .card, .case-card, .format { position: relative; width: 100%; max-width: 100%; min-width: 0; padding: 26px; border: 1px solid rgba(229, 201, 129, .18); border-radius: 24px; background: rgba(255, 255, 255, .055); box-shadow: 0 18px 46px rgba(0, 0, 0, .12); transform: none; }
-    .section-light .card, .section-light .case-card, .section-light .format { background: #fff; border-color: rgba(23, 32, 43, .09); box-shadow: 0 16px 38px rgba(23, 32, 43, .07); }
-    .card h3, .case-card h3, .format h3 { margin: 10px 0 8px; font-size: 22px; line-height: 1.12; text-wrap: balance; }
-    .card p, .case-card p, .format p { margin: 0; color: #bdc8d6; text-wrap: pretty; }
-    .badge { display: inline-flex; width: max-content; max-width: 100%; border: 1px solid rgba(229, 201, 129, .34); border-radius: 999px; padding: 6px 10px; color: var(--gold2); font-size: 12px; font-weight: 900; }
-    .section-light .badge { color: var(--gold); }
-
-    .note-panel { margin-top: 22px; padding: 24px 28px; border-radius: 28px; border: 1px solid rgba(229,201,129,.26); background: linear-gradient(135deg, rgba(229,201,129,.15), rgba(255,255,255,.045)); color: #f1e8da; font-size: 18px; }
-    .section-light .note-panel { background: linear-gradient(135deg, rgba(184,138,58,.12), rgba(255,255,255,.72)); color: var(--text); }
-    .note-panel b { color: var(--gold2); }
-    .section-light .note-panel b { color: #7b5a20; }
-
-    .hub-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; min-width: 0; }
-    .hub-card { min-height: 220px; display: flex; flex-direction: column; }
-    .hub-card .num { margin-top: auto; color: var(--gold2); font-size: 13px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
-
-    .replace-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; min-width: 0; }
-    .replace-card { width: 100%; max-width: 100%; min-width: 0; padding: 22px; border-radius: 22px; border: 1px solid rgba(229,201,129,.18); background: rgba(255,255,255,.055); }
-    .section-light .replace-card { background: #fff; border-color: rgba(23,32,43,.08); }
-    .replace-card b { display: block; margin-bottom: 8px; color: var(--gold2); font-size: 18px; }
-    .section-light .replace-card b { color: var(--gold); }
-    .replace-card span { color: #c7d1de; }
-    .section-light .replace-card span { color: var(--soft); }
-
-    .compare-columns { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; min-width: 0; }
-    .compare-box { width: 100%; max-width: 100%; min-width: 0; padding: 30px; border-radius: 30px; border: 1px solid rgba(229,201,129,.2); background: rgba(255,255,255,.055); }
-    .compare-box.after { background: linear-gradient(145deg, rgba(229,201,129,.15), rgba(255,255,255,.05)); border-color: rgba(229,201,129,.34); }
-    .compare-box h3 { margin: 0 0 18px; font-size: 30px; line-height: 1.1; text-wrap: balance; }
-    .compare-box ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
-    .compare-box li { position: relative; padding-left: 25px; color: #c8d2df; }
-    .compare-box li:before { content: "—"; position: absolute; left: 0; color: var(--gold2); font-weight: 900; }
-    .compare-box.after li:before { content: "✓"; }
-
-    .roadmap { position: relative; background: radial-gradient(circle at 82% 8%, rgba(229, 201, 129, .13), transparent 28%), linear-gradient(145deg, #0b121b, #101b27); }
-    .roadmap-track { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 34px; min-width: 0; }
-    .roadmap-track:before { content: ""; display: none; position: absolute; left: 4%; right: 4%; top: 30px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold2), transparent); opacity: .72; }
-    .roadmap-step { position: relative; z-index: 1; min-width: 0; padding: 20px 18px; border-radius: 22px; border: 1px solid rgba(229,201,129,.24); background: rgba(255,255,255,.055); box-shadow: 0 18px 42px rgba(0,0,0,.15); }
-    .roadmap-step:after { display: none; }
-    .roadmap-step:last-child:after { display: none; }
-    .roadmap-num { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 34px; padding: 0 8px; border-radius: 999px; border: 1px solid rgba(229,201,129,.42); color: var(--gold2); font-size: 12px; font-weight: 900; background: rgba(8,16,24,.44); }
-    .roadmap-step h3 { margin: 10px 0 7px; font-size: 18px; line-height: 1.05; letter-spacing: -.035em; }
-    .roadmap-step p { margin: 0; color: #cbd5e2; font-size: 14px; line-height: 1.35; }
-    .roadmap-note { display: block; margin-top: 24px; padding: 24px 28px; border-radius: 28px; border: 1px solid rgba(229,201,129,.28); background: linear-gradient(135deg, rgba(229,201,129,.15), rgba(255,255,255,.045)); }
-    .roadmap-note p { margin: 0; color: #e0e8f2; font-size: 18px; }
-    .roadmap-note b { color: var(--gold2); }
-    .route-chain { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; max-width: 100%; }
-    .route-step { display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid rgba(229,201,129,.26); background: rgba(255,255,255,.055); color: #f1e8da; font-size: 14px; font-weight: 900; white-space: nowrap; }
-    .route-step + .route-step:before { content: "→"; margin-right: 10px; color: var(--gold2); opacity: .92; }
-    .roadmap-price { justify-self: end; text-align: right; color: #dce6f2; }
-    .roadmap-price span { display: block; color: var(--muted); font-size: 12px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
-    .roadmap-price b { display: block; margin-top: 4px; color: var(--gold2); font-size: clamp(24px, 2.3vw, 32px); line-height: 1.05; }
-
-    .value-compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; min-width: 0; }
-    .value-column { min-width: 0; padding: 30px; border-radius: 30px; border: 1px solid rgba(23,32,43,.1); background: #fff; box-shadow: 0 16px 38px rgba(23,32,43,.07); }
-    .value-column.good { background: linear-gradient(145deg, #101b27, #0b121b); color: #fff; border-color: rgba(229,201,129,.34); box-shadow: 0 22px 48px rgba(16,27,39,.16); }
-    .value-column h3 { margin: 0 0 18px; font-size: clamp(28px, 2.8vw, 38px); line-height: 1.04; letter-spacing: -.045em; }
-    .compact-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
-    .compact-list li { position: relative; padding-left: 22px; color: var(--soft); }
-    .compact-list li:before { content: "—"; position: absolute; left: 0; color: var(--gold); font-weight: 900; }
-    .value-column.good .compact-list li { color: #d4deeb; }
-    .value-column.good .compact-list li:before { content: "✓"; color: var(--gold2); }
-
-    .deliverables-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; min-width: 0; }
-    .deliverable-card { min-width: 0; padding: 24px; border-radius: 24px; border: 1px solid rgba(23,32,43,.09); background: #fff; box-shadow: 0 16px 38px rgba(23,32,43,.07); }
-    .deliverable-card .roadmap-num { background: rgba(184,138,58,.08); color: var(--gold); border-color: rgba(184,138,58,.28); }
-    .deliverable-card h3 { margin: 14px 0 8px; font-size: 23px; line-height: 1.1; letter-spacing: -.035em; }
-    .deliverable-card p { margin: 0; color: var(--soft); }
-
-    .project-banner, .system-banner { position: relative; overflow: hidden; border-top: 1px solid rgba(229, 201, 129, .2); border-bottom: 1px solid rgba(229, 201, 129, .2); background: radial-gradient(circle at 82% 12%, rgba(229, 201, 129, .14), transparent 30%), linear-gradient(145deg, #101b27, #081018); }
-    .project-card { position: relative; z-index: 1; padding: 34px; border-radius: 32px; border: 1px solid rgba(229, 201, 129, .26); background: rgba(255, 255, 255, .055); overflow: hidden; }
-    .project-card h2 { max-width: 1100px; margin: 12px 0 14px; font-size: clamp(32px, 3.35vw, 50px); line-height: 1.08; letter-spacing: -.045em; text-wrap: balance; }
-    .project-flow, .system-flow { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; margin: 24px 0; min-width: 0; }
-    .project-flow div, .system-flow div { min-width: 0; padding: 16px; border-radius: 16px; border: 1px solid rgba(229, 201, 129, .22); background: rgba(255, 255, 255, .055); font-weight: 900; color: #d9e3ef; }
-
-    .big-numbers { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 28px; }
-    .big-num { min-width: 0; padding: 26px; border-radius: 26px; background: rgba(255, 255, 255, .06); border: 1px solid rgba(229, 201, 129, .24); }
-    .big-num b { display: block; color: var(--gold2); font-size: clamp(32px, 3.2vw, 48px); line-height: 1.04; letter-spacing: -.055em; text-wrap: balance; }
-    .big-num span { display: block; margin-top: 8px; color: #cbd5e2; }
-
-    .search-cost { background: radial-gradient(circle at 82% 10%, rgba(229, 201, 129, .16), transparent 28%), linear-gradient(145deg, #0b121b, #101b27); }
-    .search-cost .section-head h2, .search-cost .section-lead { text-wrap-mode: wrap; text-wrap-style: auto; }
-    .cost-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; min-width: 0; }
-    .loss-card { min-width: 0; padding: 26px; border-radius: 26px; border: 1px solid rgba(229, 201, 129, .22); background: rgba(255, 255, 255, .055); overflow: hidden; }
-    .loss-card b { display: block; color: var(--gold2); font-size: clamp(28px, 2.4vw, 40px); line-height: 1.04; letter-spacing: -.052em; text-wrap: balance; }
-    .loss-card span { display: block; margin-top: 10px; color: #cbd5e2; }
-
-    .media-box { display: grid; grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr); gap: 34px; align-items: center; padding: 32px; border: 1px solid rgba(229, 201, 129, .24); border-radius: 32px; background: rgba(255, 255, 255, .055); }
-    .media-preview { position: relative; display: block; overflow: hidden; aspect-ratio: 16/9; border-radius: 28px; border: 1px solid rgba(229, 201, 129, .5); background: #070d13; box-shadow: 0 24px 70px rgba(0, 0, 0, .34), 0 0 0 10px rgba(229, 201, 129, .045); }
-    .media-preview img { width: 100%; height: 100%; object-fit: cover; object-position: 42% center; filter: saturate(1.08) contrast(1.07) brightness(1.08); }
-    .play-button { position: absolute; right: 28px; bottom: 28px; display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; background: linear-gradient(135deg, #f2d98f, var(--gold)); color: #171308; font-size: 24px; font-weight: 900; box-shadow: 0 14px 34px rgba(0, 0, 0, .35); }
-    .media-note { margin: 10px 0 0; color: #aeb9c8; font-size: 13px; }
-    .media-content h2 { margin: 12px 0 14px; font-size: clamp(30px, 3.8vw, 48px); line-height: 1.05; letter-spacing: -.052em; text-wrap: balance; }
-    .media-content p { color: #cbd6e4; }
-
-    .formats { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; align-items: stretch; min-width: 0; }
-    .format { display: flex; flex-direction: column; gap: 12px; min-height: 330px; }
-    .format:nth-child(-n+3) { grid-column: span 2; }
-    .format:nth-child(n+4) { grid-column: span 3; }
-    .format.featured { border-color: rgba(229, 201, 129, .42); box-shadow: 0 22px 48px rgba(183, 138, 58, .12); background: linear-gradient(180deg, #fffaf1, #fff); }
-    .price { display: block; color: var(--gold); font-size: clamp(28px, 2.6vw, 40px); font-weight: 900; line-height: 1.04; letter-spacing: -.045em; text-wrap: nowrap; }
-    .recommended { display: inline-flex; width: max-content; max-width: 100%; min-height: 28px; align-items: center; padding: 0 10px; border-radius: 999px; background: rgba(183, 138, 58, .13); border: 1px solid rgba(183, 138, 58, .28); color: #7b5a20; font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
-    .format .button { margin-top: auto; }
-    .case-card { display: flex; flex-direction: column; gap: 12px; min-height: 390px; }
-    .case-card.featured { background: linear-gradient(145deg, #172637, #0b121b); color: #fff; border-color: rgba(229, 201, 129, .36); }
-    .case-line { border-top: 1px solid rgba(229, 201, 129, .16); padding-top: 10px; }
-    .section-light .case-line { border-top-color: rgba(23, 32, 43, .08); }
-    .case-line b { display: block; color: var(--gold); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
-    .case-link { margin-top: auto; color: var(--gold2); font-weight: 900; }
-    .section-light .case-link { color: var(--gold); }
-
-    .contact { position: relative; overflow: hidden; text-align: center; background: radial-gradient(circle at 50% 0, rgba(229, 201, 129, .22), transparent 34%), linear-gradient(145deg, #101b27, #081018); }
-    .contact .wrap { position: relative; z-index: 1; }
-    .contact h2 { max-width: 920px; margin: 14px auto; font-size: clamp(36px, 4.6vw, 62px); line-height: 1.04; letter-spacing: -.058em; text-wrap: balance; }
-    .contact p { color: #d3dce8; font-size: 18px; }
-    .contact .contact-channels { justify-content: center; }
-    .footer { padding: 24px 0; color: #7d8795; font-size: 13px; background: #081018; }
-    .footerin { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
-    .footer-links, .footer-contacts { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; }
-    .footer-links a, .footer-contacts a { color: #aeb8c5; font-weight: 800; }
-    .footer-links a:hover, .footer-contacts a:hover { color: var(--gold2); }
-    .anchor-alias { position: relative; top: -90px; display: block; width: 0; height: 0; overflow: hidden; }
-    .footer-brand { display: inline-flex; align-items: center; gap: 10px; color: #aeb8c5; }
-    .footer-mark { width: 28px; height: 28px; border-radius: 9px; display: grid; place-items: center; border: 1px solid rgba(229,201,129,.32); color: var(--gold2); font-weight: 900; font-size: 11px; letter-spacing: -.08em; opacity: .88; }
-
-    @media (max-width: 1180px) {
-      .grid4, .hub-grid, .replace-grid, .roadmap-track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .roadmap-step:after { display: none; }
-      .project-flow, .system-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .big-numbers, .cost-grid, .formats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .format:nth-child(-n+3), .format:nth-child(n+4) { grid-column: auto; }
-    }
-    @media (max-width: 980px) {
-      .links { display: none; }
-      .hero-grid, .grid2, .media-box, .compare-columns { grid-template-columns: 1fr; }
-      .portrait-frame, .photo-caption { margin: 0 auto; }
-      .grid3 { grid-template-columns: 1fr; }
-      .brand-watermark { opacity: .035; }
-    }
-    @media (max-width: 640px) {
-      body { padding-bottom: 0; }
-      main { display: flex; flex-direction: column; padding-bottom: 96px; }
-      .desktop-only { display: none; }
-      .mobile-deep { display: none !important; }
-      .wrap { width: calc(100% - 28px); }
-      .navin { height: 64px; gap: 12px; }
-      .brand { max-width: 58vw; font-size: 16px; }
-      .brand > span:not(.brand-mark) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-      .brand-mark { width: 36px; height: 36px; flex-basis: 36px; border-radius: 11px; font-size: 13px; }
-      .brand small { display: none; }
-      .nav .button { flex: 0 0 auto; min-height: 42px; padding: 0 14px; white-space: nowrap; }
-      .hero { order: 1; padding: 36px 0 42px; }
-      .quick-nav { order: 2; }
-      #service { order: 3; }
-      #team { order: 4; }
-      #standard { order: 5; }
-      #chaos { order: 6; }
-      #roadmap { order: 7; }
-      #cost-of-chaos { order: 8; }
-      #formats { order: 9; }
-      #cases { order: 10; }
-      #media { order: 11; }
-      #contact { order: 12; }
-      .brand-watermark { display: none; }
-      .hero-grid { gap: 24px; }
-      .hero h1 { font-size: clamp(34px, 10vw, 42px); line-height: 1.04; letter-spacing: -.045em; }
-      .sense { font-size: 12px; line-height: 1.4; }
-      .lead { font-size: 17px; line-height: 1.5; }
-      .hero-note { display: block; padding: 14px 16px; border-radius: 18px; font-size: 15px; line-height: 1.45; }
-      .status-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; overflow: visible; padding-bottom: 0; }
-      .status-row::-webkit-scrollbar { display: none; }
-      .pill { justify-content: center; width: 100%; min-width: 0; min-height: 32px; padding: 0 8px; font-size: 10px; letter-spacing: .045em; white-space: nowrap; }
-      .fact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-      .fact { padding: 13px; border-radius: 16px; }
-      .fact b { font-size: 14px; line-height: 1.2; }
-      .fact span { font-size: 13px; line-height: 1.35; }
-      .hub-grid, .replace-grid, .project-flow, .system-flow, .big-numbers, .cost-grid, .formats, .deliverables-grid, .value-compare { grid-template-columns: 1fr; }
-      .format:nth-child(-n+3), .format:nth-child(n+4) { grid-column: auto; }
-      .actions { display: grid; grid-template-columns: 1fr; }
-      .actions .button { width: 100%; }
-      .contact-channels { display: grid; grid-template-columns: 1fr 1fr; }
-      .channel-label { grid-column: 1/-1; }
-      .channel { min-width: 0; min-height: 44px; padding: 0 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-      .portrait-frame { width: min(230px, 68vw); border-radius: 28px; }
-      .photo-caption { display: none; }
-      section { padding: 48px 0; }
-      .section-head { margin-bottom: 26px; }
-      .section-head h2 { font-size: clamp(28px, 8vw, 34px); line-height: 1.08; letter-spacing: -.035em; }
-      .section-head p { font-size: 17px; line-height: 1.5; }
-      .card, .case-card, .format, .replace-card, .compare-box { padding: 20px; margin-inline: 0; }
-      .case-card { min-height: auto; }
-      .project-card { padding: 20px; }
-      .project-card h2 { font-size: 30px; line-height: 1.1; }
-      .format { min-height: auto; }
-      .format.featured { order: -1; }
-      .media-box { padding: 20px; gap: 22px; }
-      .media-preview { border-radius: 22px; }
-      .play-button { right: 18px; bottom: 18px; width: 50px; height: 50px; font-size: 20px; }
-      .quick-nav { padding: 14px 0; position: sticky; top: 64px; z-index: 24; background: rgba(8, 16, 24, .94); backdrop-filter: blur(14px); }
-      .quick-nav-in { display: grid; gap: 10px; }
-      .quick-chips { min-width: 0; overflow: visible; flex-wrap: wrap; padding-bottom: 0; scrollbar-width: auto; -webkit-overflow-scrolling: auto; scroll-snap-type: none; }
-      .quick-chips::-webkit-scrollbar { display: none; }
-      .quick-chips a { flex: 1 1 auto; justify-content: center; min-height: 36px; white-space: nowrap; scroll-snap-align: none; }
-
-      .roadmap-track { grid-template-columns: 1fr; gap: 0; margin-left: 8px; padding-left: 22px; }
-      .roadmap-track:before { display: block; left: 8px; right: auto; top: 0; bottom: 0; width: 2px; height: auto; background: linear-gradient(180deg, transparent, var(--gold2), transparent); }
-      .roadmap-step { margin-bottom: 12px; padding: 16px 16px 16px 18px; }
-      .roadmap-step:before { content: ""; position: absolute; left: -22px; top: 26px; width: 11px; height: 11px; border-radius: 50%; background: var(--gold2); box-shadow: 0 0 0 5px rgba(229,201,129,.14); }
-      .roadmap-step:after { display: none; }
-      .roadmap-step h3 { font-size: 20px; }
-      .roadmap-note { padding: 20px; }
-      .route-chain { gap: 8px; }
-      .route-step { min-height: 32px; padding: 0 10px; font-size: 13px; }
-      .route-step + .route-step:before { margin-right: 8px; }
-      .roadmap-price { justify-self: start; text-align: left; }
-      .value-column, .deliverable-card { padding: 22px; }
-      .value-column h3 { font-size: 28px; }
-      .deliverable-card h3 { font-size: 21px; }
-      .search-cost .section-head h2, #formats .section-head h2, #compare-value .section-head h2 { font-size: clamp(30px, 8.4vw, 36px); line-height: 1.1; }
-      .mobile-sticky-cta { position: fixed; left: 16px; right: 16px; bottom: calc(14px + env(safe-area-inset-bottom)); z-index: 90; display: flex; align-items: center; justify-content: center; min-height: 52px; border-radius: 18px; background: linear-gradient(135deg, #f0d78f, var(--gold)); color: #171308; font-weight: 900; box-shadow: 0 20px 44px rgba(0, 0, 0, .35); opacity: 0; pointer-events: none; transform: translateY(16px); transition: opacity .22s ease, transform .22s ease; }
-      .mobile-sticky-cta.is-visible, .mobile-sticky-cta:focus { opacity: 1; pointer-events: auto; transform: translateY(0); }
-      .footerin { display: grid; justify-items: start; }
-    }
-  </style>
-</head>
-<body>
-  <nav class="nav">
-    <div class="wrap navin">
-      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">ПЛ</span><span>Павел Леонтьев<small>Новостройки бизнес- и премиум-класса</small></span></a>
-      <div class="links"><a href="#service">Сервис</a><a href="#team">Команда</a><a href="#standard">Стандарт</a><a href="#roadmap">Маршрут</a><a href="#cases">Кейсы</a><a href="#formats">Форматы</a><a href="#contact">Контакты</a></div>
-      <a class="button" href="tel:+79936266544">Позвонить</a>
-    </div>
-  </nav>
-
-  <main id="top">
-    <section class="hero">
-      <img class="brand-watermark" src="assets/brand/logo-mark-gold.svg?v=concierge-service-20260703" alt="" aria-hidden="true">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Консьерж-сервис по покупке новостроек</div>
-          <div class="status-row"><span class="pill">Бизнес-класс</span><span class="pill">Премиум</span><span class="pill">Команда</span><span class="pill">Стандарт</span><span class="pill">Сделка</span></div>
-          <h1>Консьерж-сервис <span>по покупке новостроек</span></h1>
-          <p class="sense">Бизнес- и премиум-класс</p>
-          <p class="lead">Павел Леонтьев — советник по покупке новостроек и руководитель экспертного сопровождения. Один контакт собирает стратегию, рынок, экономику, риски, команду и сделку.</p>
-          <div class="hero-note">Вы ставите задачу — я веду покупку как проект: от критериев и короткого списка до переговоров, документов, приёмки, ремонта и мебели.</div>
-          <div class="fact-grid"><div class="fact"><b>Советник</b><span>покупка как управляемый проект</span></div><div class="fact"><b>Команда под задачу</b><span>ипотека, юристы, приёмка, ремонт</span></div><div class="fact"><b>Стандарт разбора</b><span>единая логика проверки объектов</span></div><div class="fact"><b>После сделки</b><span>приёмка, ремонт, комплектация</span></div></div>
-          <div class="actions"><a class="button gold" href="#contact">Обсудить покупку</a><a class="button dark" href="#service">Что входит в сервис</a></div>
-          <div class="contact-channels"><span class="channel-label">Связаться:</span><a class="channel channel-wa" href="https://wa.me/79936266544" target="_blank" rel="noopener">WhatsApp</a><a class="channel channel-max" href="https://max.ru/u/f9LHodD0cOL4I0SEi8HyfIk9kgXPy_7CRBMH8zAvVY_YuXtnui5-LH6N3Uw" target="_blank" rel="noopener">MAX</a><a class="channel" href="tel:+79936266544">Позвонить</a><a class="channel" href="mailto:leontev@leontevpro.ru">Email</a></div>
-        </div>
-        <aside class="portrait-card"><div class="portrait-frame"><img src="pavel-photo.jpg" alt="Павел Леонтьев — советник по покупке новостроек"></div><div class="photo-caption"><b>Павел Леонтьев</b><span>Советник по покупке новостроек и руководитель экспертного сопровождения: стратегия, команда, стандарт разбора и контроль сделки.</span></div></aside>
-      </div>
-    </section>
-
-    <section class="quick-nav" aria-label="Быстрая навигация по сайту">
-      <div class="wrap quick-nav-in"><span class="quick-nav-title">Быстро:</span><div class="quick-chips"><a href="#service">Что входит</a><a href="#team">Команда</a><a href="#standard">Стандарт</a><a href="#roadmap">Маршрут</a><a href="#formats">Форматы</a><a href="#cases">Кейсы</a><a href="#contact">Контакты</a></div></div>
-    </section>
-
-    <section id="service" class="section-light">
-      <div class="wrap">
-        <div class="section-head wide-copy"><div class="eyebrow">Что входит в сервис</div><h2>Что входит в консьерж-сервис по покупке новостроек</h2><p>Это не список ЖК и не пересылка презентаций. Я беру на себя организационный хаос покупки и собираю процесс в одну систему: цель, рынок, команда, экономика, риски, сделка и следующий шаг.</p></div>
-        <div class="grid3"><article class="card"><span class="badge">01</span><h3>Стратегия покупки</h3><p>Цель, бюджет, срок, участники решения и сценарий: для жизни, инвестиций или смешанная логика.</p></article><article class="card"><span class="badge">02</span><h3>Короткий список</h3><p><span class="nowrap">2–3 рабочих сценария</span> вместо десятков ссылок, случайных ЖК и разрозненных презентаций.</p></article><article class="card"><span class="badge">03</span><h3>Экономика решения</h3><p>Квартира, ремонт, мебель, платежи, рассрочка, ипотека и полная стоимость въезда.</p></article><article class="card"><span class="badge">04</span><h3>Риски и условия</h3><p>Застройщик, документы, сроки, договор, ликвидность, будущая продажа и слабые места сделки.</p></article><article class="card"><span class="badge">05</span><h3>Сделка и переговоры</h3><p>Бронь, условия, скидки, ипотека, регистрация, документы и контроль следующего шага.</p></article><article class="card"><span class="badge">06</span><h3>После покупки</h3><p>Приёмка, дефекты, ремонт, мебель, техника, комплектация и понятный маршрут переезда.</p></article></div>
-        <div class="note-panel"><b>Консьерж-сервис по покупке новостроек</b> — это один центр ответственности, который управляет рынком, условиями, экспертами и маршрутом покупки.</div>
-      </div>
-    </section>
-
-    <section id="team" class="section-dark">
-      <div class="wrap">
-        <div class="section-head wide-copy"><div class="eyebrow">Команда под задачу</div><h2>Не случайные подрядчики, а экспертный контур вокруг покупки</h2><p>Павел остаётся единым центром управления, а под конкретную сделку подключаются нужные специалисты. Клиент не собирает всех вручную и не переводит между ними смысл задачи.</p></div>
-        <div class="grid4"><article class="card"><span class="badge">Финансы</span><h3>Ипотека и рассрочка</h3><p>Сценарии платежей, ограничения банков, условия застройщика и влияние схемы оплаты на итоговую экономику.</p></article><article class="card"><span class="badge">Право</span><h3>Юридический контур</h3><p>Договор, ДДУ или уступка, документы, сроки, регистрация и зоны, где нельзя двигаться “на удачу”.</p></article><article class="card"><span class="badge">Техника</span><h3>Приёмка и качество</h3><p>Инженерия, дефекты, сроки устранения, качество отделки и понимание реальной готовности объекта.</p></article><article class="card"><span class="badge">Въезд</span><h3>Ремонт и мебель</h3><p>Смета, сроки, комплектация, подрядчики и стоимость доведения квартиры до жизни или сдачи.</p></article></div>
-        <div class="note-panel"><b>Роль Павла:</b> советник по покупке новостроек и руководитель экспертного сопровождения. Вы общаетесь с одним центром, а не управляете юристами, банками, приёмкой и ремонтом самостоятельно.</div>
-      </div>
-    </section>
-
-    <section id="standard" class="section-light">
-      <div class="wrap">
-        <div class="section-head wide-copy"><div class="eyebrow">Внутренний регламент</div><h2>Внутренний стандарт экспертного разбора Павла Леонтьева</h2><p>Это профессиональный стандарт проверки объекта и маршрута сделки, а не курс, чек-лист или инфопродукт. По нему каждый вариант проходит одну логику: цель, критерии, экономика, риски, статус и следующий шаг.</p></div>
-        <div class="deliverables-grid"><article class="deliverable-card"><span class="roadmap-num">01</span><h3>Диагностика задачи</h3><p>Цель покупки, бюджет, сроки, участники решения, ограничения и сценарий использования квартиры.</p></article><article class="deliverable-card"><span class="roadmap-num">02</span><h3>Фильтр объекта</h3><p>Локация, класс проекта, застройщик, срок сдачи, планировка, ремонт и соответствие критериям.</p></article><article class="deliverable-card"><span class="roadmap-num">03</span><h3>Экономика</h3><p>Полная стоимость: цена, платежи, ипотека/рассрочка, ремонт, мебель, парковка и стоимость въезда.</p></article><article class="deliverable-card"><span class="roadmap-num">04</span><h3>Риски</h3><p>Договор, условия оплаты, сроки, ликвидность, будущая продажа и слабые места решения.</p></article><article class="deliverable-card"><span class="roadmap-num">05</span><h3>Матрица решений</h3><p>Каждый объект получает статус: считать, проверить, отсечь, оставить или вынести на переговоры.</p></article><article class="deliverable-card"><span class="roadmap-num">06</span><h3>Следующий шаг</h3><p>Что делаем дальше: переговоры, бронь, документы, сделка, приёмка или возврат к стратегии.</p></article></div>
-        <div class="note-panel"><b>Стандарт нужен, чтобы решение не зависело от настроения менеджера или красивой презентации.</b> Объекты сравниваются по одной профессиональной логике — так появляется управляемость покупки.</div>
-      </div>
-    </section>
-
-    <section id="chaos" class="section-light">
-      <div class="wrap">
-        <div class="section-head wide-copy"><div class="eyebrow">Хаос / порядок</div><h2>Без системы покупка превращается в хаос</h2><p>Сначала кажется, что нужно просто посмотреть варианты. Потом появляются десятки звонков, чатов, ссылок, условий, поездок и вопросов, которые никто не собирает в одно решение.</p></div>
-        <div class="value-compare"><article class="value-column"><h3>Без системы</h3><ul class="compact-list"><li><span class="nowrap">20–50&nbsp;ссылок</span> и презентаций</li><li>звонки от агентов и застройщиков</li><li>условия разбросаны по разным чатам</li><li>ипотека, рассрочка и ремонт считаются отдельно</li><li>непонятна полная стоимость покупки</li><li>поездки на объекты, которые можно было отсечь</li><li>решение принимается на усталости</li></ul></article><article class="value-column good"><h3>С консьерж-сервисом</h3><ul class="compact-list"><li>один центр ответственности</li><li>команда экспертов под задачу</li><li>внутренний стандарт разбора</li><li>понятные критерии и короткий список</li><li>расчёт полной стоимости</li><li>матрица сравнения объектов</li><li>контроль сделки и документов</li><li>приёмка, ремонт, мебель и следующий шаг</li></ul></article></div>
-      </div>
-    </section>
-
-    <section id="roadmap" class="roadmap section-dark">
-      <div class="wrap">
-        <div class="section-head wide-copy"><div class="eyebrow">Дорожная карта</div><h2>Как работает консьерж-сервис</h2><p>Покупка идёт не через хаотичный поток звонков, а по маршруту: стратегия → команда → стандарт разбора → финальные варианты → сделка → следующий шаг.</p></div>
-        <div class="roadmap-track" aria-label="Маршрут покупки"><article class="roadmap-step"><span class="roadmap-num">01</span><h3>Диагностика</h3><p>цель, бюджет, срок</p></article><article class="roadmap-step"><span class="roadmap-num">02</span><h3>Стратегия</h3><p>сценарий покупки</p></article><article class="roadmap-step"><span class="roadmap-num">03</span><h3>Команда</h3><p>нужные эксперты</p></article><article class="roadmap-step"><span class="roadmap-num">04</span><h3>Стандарт</h3><p>единая проверка</p></article><article class="roadmap-step"><span class="roadmap-num">05</span><h3>Финальные варианты</h3><p><span class="nowrap">2–3&nbsp;сценария</span></p></article><article class="roadmap-step"><span class="roadmap-num">06</span><h3>Экономика</h3><p>полная стоимость</p></article><article class="roadmap-step"><span class="roadmap-num">07</span><h3>Сделка</h3><p>условия и документы</p></article><article class="roadmap-step"><span class="roadmap-num">08</span><h3>После покупки</h3><p>приёмка, ремонт, мебель</p></article></div>
-        <div class="roadmap-note"><p><b>Логика сервиса:</b> консьерж-сервис → команда экспертов → внутренний стандарт разбора → управляемая сделка.</p><div class="route-chain" aria-label="Маршрут консьерж-сервиса"><span class="route-step">Стратегия</span><span class="route-step">Команда</span><span class="route-step">Стандарт</span><span class="route-step">Матрица</span><span class="route-step">Экономика</span><span class="route-step">Риски</span><span class="route-step">Сделка</span><span class="route-step">Ремонт и мебель</span></div></div>
-      </div>
-    </section>
-
-    <section id="cost-of-chaos" class="search-cost"><span id="search-cost" class="anchor-alias" aria-hidden="true"></span>
-      <div class="wrap"><div class="section-head wide-copy"><div class="eyebrow">Цена хаоса</div><h2>Ошибка в <span class="nowrap">2–5%</span> может стоить дороже сопровождения</h2><p class="section-lead lead-split">При покупке квартиры за <span class="nowrap">25&nbsp;млн&nbsp;₽</span> ошибка всего в <span class="nowrap">2–5%</span> — это <span class="nowrap">500&nbsp;тыс. — 1,25&nbsp;млн&nbsp;₽</span>.</p><p class="section-lead lead-split">Поэтому важно считать не только цену квартиры, но и ремонт, платежи, сроки, ликвидность и будущую продажу.</p></div><div class="cost-grid"><div class="loss-card"><b><span class="nowrap">40–80&nbsp;часов</span></b><span>поиск, звонки, переписки и поездки</span></div><div class="loss-card"><b><span class="nowrap">20–50&nbsp;ссылок</span></b><span>ЖК, планировки, презентации и дубли</span></div><div class="loss-card"><b><span class="nowrap">10–20&nbsp;контактов</span></b><span>агенты, менеджеры, банки и подрядчики</span></div><div class="loss-card"><b><span class="nowrap">2–4&nbsp;просмотра</span></b><span>объекты, которые можно было отсечь онлайн</span></div></div><div class="note-panel lead-split"><b>Если считать час покупателя в <span class="nowrap">5–20&nbsp;тыс.&nbsp;₽</span>,</b><br><span class="nowrap">60&nbsp;часов</span> самостоятельного поиска — это <span class="nowrap">300&nbsp;тыс. — 1,2&nbsp;млн&nbsp;₽</span> стоимости внимания.<br>Это не главный аргумент, но хороший способ увидеть цену хаоса.</div><div class="actions"><a class="button gold" href="/client-cases/flat-choice-strategy/search-chaos-cost.html">Посмотреть пример разбора хаоса</a><a class="button dark" href="#contact">Разобрать мою ситуацию</a></div></div>
-    </section>
-
-    <section id="formats" class="section-light">
-      <div class="wrap"><div class="section-head wide-copy"><div class="eyebrow">Форматы и стоимость</div><h2>Форматы экспертного сопровождения</h2><p class="section-lead lead-split">Платная работа начинается не с разговора,<br>а с подготовки, анализа, сравнения сценариев,<br>подключения нужной команды и дорожной карты решения.</p></div><div class="formats"><article class="format"><span class="badge">10–15&nbsp;минут</span><h3>Первичный созвон</h3><span class="price">Бесплатно</span><p>Понять задачу, бюджет, срочность и подходит ли мой формат.</p><a class="button" href="#contact">Записаться</a></article><article class="format featured"><span class="recommended">Минимальный платный формат</span><h3>Стратегическая диагностика</h3><span class="price">от&nbsp;100&nbsp;000&nbsp;₽</span><p>Подготовка, встреча, стратегия покупки, критерии, риски, первичная экономика и follow-up.</p><a class="button gold" href="#contact">Обсудить диагностику</a></article><article class="format"><span class="badge">Глубокий разбор</span><h3>Карта покупки&nbsp;360°</h3><span class="price">от&nbsp;180&nbsp;000&nbsp;₽</span><p>Разбор <span class="nowrap">2–5&nbsp;объектов</span>: матрица решений, полная стоимость, сценарии сделки, риски и следующий шаг.</p><a class="button" href="#contact">Записаться на 360°</a></article><article class="format"><span class="badge">До сделки</span><h3>Консьерж-сопровождение</h3><span class="price">от&nbsp;2–3%</span><p>Стратегия, команда под задачу, проверка, переговоры, условия, бронь, ипотека/рассрочка, документы и сделка.</p><a class="button" href="#contact">Обсудить сопровождение</a></article><article class="format"><span class="badge">50–100+&nbsp;млн&nbsp;₽</span><h3>Премиальное сопровождение</h3><span class="price">Индивидуально</span><p>Персональный контур: стратегия, переговоры, сделка, приёмка, ремонт, мебель, комплектация и партнёры.</p><a class="button" href="#contact">Обсудить премиум</a></article></div><div class="actions"><a class="button dark" href="/formats/">Все форматы и стоимость</a></div></div>
-    </section>
-
-    <section id="cases" class="section-light">
-      <div class="wrap"><div class="section-head wide-copy"><div class="eyebrow">Кейсы</div><h2>Кейсы по типам клиентов и задач</h2><p>Обезличенные примеры показывают ход мышления: задача, риск, инструмент и следующий шаг. Без персональных данных и без обещаний гарантированной выгоды.</p></div><div class="grid4"><a class="case-card featured" href="/client-cases/flat-choice-strategy/search-chaos-cost.html"><span class="badge">Новый кейс · цена хаоса</span><h3>Клиент тонет в звонках, ссылках и презентациях</h3><div class="case-line"><b>Риск</b><span>Месяцы поиска, десятки ссылок и решение “на усталости”.</span></div><div class="case-line"><b>Метод</b><span>Единая матрица объектов, фильтр критериев, карта экономики и <span class="nowrap">2–3 сценария</span>.</span></div><span class="case-link">Смотреть презентацию</span></a><a class="case-card" href="/client-cases/flat-choice-strategy/"><span class="badge">Стратегия выбора</span><h3>Новостройка, вторичка или ремонт</h3><div class="case-line"><b>Метод</b><span>Светофор критериев и матрица решений.</span></div><span class="case-link">Смотреть кейс</span></a><a class="case-card" href="/cases/family-purchase/"><span class="badge">Семья · до 35 млн ₽</span><h3>Семейная покупка без хаоса</h3><div class="case-line"><b>Метод</b><span>Карта требований семьи и согласованный следующий шаг.</span></div><span class="case-link">Смотреть кейс</span></a><a class="case-card" href="/cases/certificate-roadmap/"><span class="badge">Сертификат</span><h3>Сложная сделка с целевыми деньгами</h3><div class="case-line"><b>Метод</b><span>Маршрут применения денег и проверка объекта до бронирования.</span></div><span class="case-link">Смотреть кейс</span></a></div><div class="actions"><a class="button gold" href="/cases/">Все кейсы</a><a class="button dark" href="/system/">Как работает система</a></div></div>
-    </section>
-
-    <section id="media" class="section-dark">
-      <div class="wrap media-box"><div><a class="media-preview" href="https://www.1tv.ru/shows/dobroe-utro/pro-dengi/vy-v-otpusk-a-my-na-rasprodazhu-dobroe-utro-fragment-vypuska-ot-26-06-2026" target="_blank" rel="noopener" aria-label="Смотреть комментарий Павла Леонтьева на сайте Первого канала"><img src="assets/media-poster.svg?v=poster-typography-20260701" alt="Постер комментария Павла Леонтьева на Первом канале" loading="lazy"><span class="play-button">▶</span></a><p class="media-note">Фрагмент эфира. Комментарий начинается примерно с 2:12.</p></div><div class="media-content"><div class="eyebrow">СМИ</div><h2>Павел Леонтьев в программе «Доброе утро»</h2><p>Комментарий для Первого канала о скидках на новостройки и реальной выгоде покупателя.</p><p>Главная мысль эфира: скидка в рекламе и настоящая экономия — не одно и то же. Перед покупкой важно считать цену метра, условия оплаты, срок сдачи, платежи, ремонт, риски и будущую ликвидность.</p><div class="actions"><a class="button gold" href="https://www.1tv.ru/shows/dobroe-utro/pro-dengi/vy-v-otpusk-a-my-na-rasprodazhu-dobroe-utro-fragment-vypuska-ot-26-06-2026" target="_blank" rel="noopener">Смотреть комментарий с 2:12</a><a class="button dark" href="#contact">Получить разбор объекта</a></div></div></div>
-    </section>
-
-    <section id="contact" class="contact">
-      <img class="brand-watermark" src="assets/brand/logo-mark-gold.svg?v=concierge-service-20260703" alt="" aria-hidden="true">
-      <div class="wrap"><div class="eyebrow">Следующий шаг</div><h2>Хотите понять, какой путь покупки подходит вам?</h2><p>Пришлите <span class="nowrap">1–3&nbsp;объекта</span>, районы или просто описание задачи. Я скажу, нужен ли быстрый комментарий, диагностика, <span class="nowrap">карта покупки&nbsp;360°</span> или консьерж-сопровождение с командой под задачу.</p><div class="actions" style="justify-content:center"><a class="button gold" href="https://wa.me/79936266544" target="_blank" rel="noopener">Написать в WhatsApp</a><a class="button dark" href="https://max.ru/u/f9LHodD0cOL4I0SEi8HyfIk9kgXPy_7CRBMH8zAvVY_YuXtnui5-LH6N3Uw" target="_blank" rel="noopener">Написать в MAX</a><a class="button dark" href="tel:+79936266544">Позвонить Павлу</a><a class="button dark" href="mailto:leontev@leontevpro.ru">Email</a></div><div class="contact-channels"><span class="channel-label">Контакты:</span><a class="channel channel-wa" href="https://wa.me/79936266544" target="_blank" rel="noopener">WhatsApp</a><a class="channel channel-max" href="https://max.ru/u/f9LHodD0cOL4I0SEi8HyfIk9kgXPy_7CRBMH8zAvVY_YuXtnui5-LH6N3Uw" target="_blank" rel="noopener">MAX</a><a class="channel" href="tel:+79936266544">+7 993 626-65-44</a><a class="channel" href="mailto:leontev@leontevpro.ru">leontev@leontevpro.ru</a></div></div>
-    </section>
-  </main>
-
-  <footer class="footer"><div class="wrap footerin"><span class="footer-brand"><span class="footer-mark" aria-hidden="true">ПЛ</span>© Павел Леонтьев, 2026</span><nav class="footer-links" aria-label="Нижняя навигация"><a href="/method/">Метод</a><a href="/cases/">Кейсы</a><a href="/formats/">Форматы</a><a href="#contact">Контакты</a></nav><div class="footer-contacts"><a href="https://wa.me/79936266544" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+79936266544">+7 993 626-65-44</a><a href="mailto:leontev@leontevpro.ru">leontev@leontevpro.ru</a></div><span>Информация не является индивидуальной инвестиционной рекомендацией.</span></div></footer>
-  <a class="mobile-sticky-cta" href="#contact">Обсудить покупку</a>
-  <script>
-    (() => {
-      const cta = document.querySelector('.mobile-sticky-cta');
-      const hero = document.querySelector('.hero');
-      if (!cta || !hero) return;
-      if (!('IntersectionObserver' in window)) {
-        cta.classList.add('is-visible');
-        return;
-      }
-      const observer = new IntersectionObserver(([entry]) => {
-        cta.classList.toggle('is-visible', !entry.isIntersecting);
-      }, { threshold: 0.05 });
-      observer.observe(hero);
-    })();
-  </script>
-</body>
-</html>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Стратегия, переговоры и GR для бизнеса — Павел Леонтьев</title><meta name="description" content="Павел Леонтьев: поиск узких мест, стратегия, деловые переговоры, GR и сопровождение реализации. Личная работа с собственниками бизнеса."><meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#102a3b"><link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"><link rel="stylesheet" href="/assets/site.css?v=75e9e64481"><link rel="stylesheet" href="/assets/compact.css?v=ac8beea96d"><link rel="stylesheet" href="/assets/stories.css?v=8db83eaded"><link rel="stylesheet" href="/assets/readability.css?v=ae5860a6f2"><script src="/assets/site.js?v=94d2ba970e" defer></script><link rel="canonical" href="https://leontev.pro/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Павел Леонтьев">
+<meta property="og:title" content="Стратегия, переговоры и GR для бизнеса — Павел Леонтьев">
+<meta property="og:description" content="Павел Леонтьев: стратегия, узкие места бизнеса, переговоры, GR и сопровождение реализации. Личная работа с собственниками.">
+<meta property="og:url" content="https://leontev.pro/">
+<meta property="og:image" content="https://leontev.pro/assets/pavel-leontev.jpg">
+<meta property="og:image:alt" content="Павел Леонтьев">
+<meta name="twitter:card" content="summary">
+</head><body><a href="#main" class="skip">К содержанию</a><header class="header" id="top"><div class="wrap header-inner"><a href="#top" class="brand" aria-label="Павел Леонтьев — главная"><span class="brand-mark" aria-hidden="true">ПЛ</span><span><span class="brand-name">ПАВЕЛ ЛЕОНТЬЕВ</span><span class="brand-sub">СТРАТЕГИЯ · ПЕРЕГОВОРЫ · GR</span></span></a><nav class="nav" aria-label="Основная навигация"><a href="#services" class="">Чем помогу</a><a href="#experience" class="">Опыт</a><a href="#media" class="">Медиа</a><a href="#contact" class="nav-cta">Обсудить задачу</a></nav><button class="menu-button" data-menu-toggle aria-controls="mobile-nav" aria-expanded="false">Меню +</button></div><nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация" hidden><a href="#services" class="">Чем помогу</a><a href="#experience" class="">Опыт</a><a href="#media" class="">Медиа</a><a href="#contact" class="nav-cta">Обсудить задачу</a></nav></header><main id="main"><section class="hero compact-hero"><div class="wrap hero-inner"><div class="hero-copy"><div class="eyebrow">Личная работа с собственниками</div><h1>Стратегия.<br>Переговоры.<br><em>GR для бизнеса.</em></h1><p class="lead">Помогаю найти главное ограничение, выбрать направление развития и организовать движение к результату.</p><div class="actions"><a href="#contact" class="btn">Обсудить задачу<span class="arrow" aria-hidden="true">↗</span></a><a href="#services" class="text-link">Чем могу помочь<span class="arrow" aria-hidden="true">↗</span></a></div></div><div class="portrait-frame"><img src="/assets/pavel-leontev.jpg" alt="Павел Леонтьев" width="886" height="886" fetchpriority="high"><div class="portrait-label"><strong>Павел Леонтьев</strong><span>Развитие бизнеса и партнёрств</span></div></div></div></section>
+<section class="section compact-services" id="services"><div class="wrap"><div class="section-top"><div><div class="eyebrow">Пять направлений</div><h2>Что нужно вашему бизнесу?</h2></div><p class="muted">Выберите задачу —<br>подробности раскроются здесь.</p></div><div class="service-list"><details name="services" class="service-disclosure" id="diagnostics"><summary><span class="service-no">01</span><h3>Узкие места бизнеса</h3><p>Понять, что мешает достичь цели и какое изменение важнее всего.</p><span class="expand-symbol" aria-hidden="true">+</span></summary><div class="service-expanded"><div><span class="detail-label">С какой задачей</span><p>Есть цель роста, но действия не дают ожидаемого продвижения.</p></div><div><span class="detail-label">Результат этапа</span><p>Карта ограничений, выбранный приоритет и действие, с которого стоит начать.</p></div><div><a href="mailto:leontev@leontevpro.ru?subject=%D0%9E%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%3A%20%D0%A3%D0%B7%D0%BA%D0%B8%D0%B5%20%D0%BC%D0%B5%D1%81%D1%82%D0%B0%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0" class="text-link">Обсудить направление<span class="arrow" aria-hidden="true">↗</span></a></div></div></details><details name="services" class="service-disclosure" id="strategy"><summary><span class="service-no">02</span><h3>Стратегия и сессии</h3><p>Выбрать направление развития и согласовать действия собственника и команды.</p><span class="expand-symbol" aria-hidden="true">+</span></summary><div class="service-expanded"><div><span class="detail-label">С какой задачей</span><p>Компания выросла, а прежний способ управления больше не помогает двигаться дальше.</p></div><div><span class="detail-label">Результат этапа</span><p>Выбранный путь, условия запуска, ресурсы и ответственные.</p></div><div><a href="mailto:leontev@leontevpro.ru?subject=%D0%9E%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%3A%20%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F%20%D0%B8%20%D1%81%D0%B5%D1%81%D1%81%D0%B8%D0%B8" class="text-link">Обсудить направление<span class="arrow" aria-hidden="true">↗</span></a></div></div></details><details name="services" class="service-disclosure" id="negotiations"><summary><span class="service-no">03</span><h3>Переговоры и партнёрства</h3><p>Подготовить позицию и договориться с ключевыми участниками проекта.</p><span class="expand-symbol" aria-hidden="true">+</span></summary><div class="service-expanded"><div><span class="detail-label">С какой задачей</span><p>Есть потенциальный партнёр, но стороны по-разному понимают вклад и результат.</p></div><div><span class="detail-label">Результат этапа</span><p>Подготовка и участие в согласованном формате; зафиксированные условия и следующий шаг.</p></div><div><a href="mailto:leontev@leontevpro.ru?subject=%D0%9E%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%3A%20%D0%9F%D0%B5%D1%80%D0%B5%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D1%8B%20%D0%B8%20%D0%BF%D0%B0%D1%80%D1%82%D0%BD%D1%91%D1%80%D1%81%D1%82%D0%B2%D0%B0" class="text-link">Обсудить направление<span class="arrow" aria-hidden="true">↗</span></a></div></div></details><details name="services" class="service-disclosure" id="gr"><summary><span class="service-no">04</span><h3>GR и государственные структуры</h3><p>Представить проект, выстроить диалог, проработать поддержку и финансирование.</p><span class="expand-symbol" aria-hidden="true">+</span></summary><div class="service-expanded"><div><span class="detail-label">С какой задачей</span><p>Нужно представить проект и определить подходящий маршрут взаимодействия.</p></div><div><span class="detail-label">Результат этапа</span><p>Маршрут обращения, подготовленная позиция, организация взаимодействия и дальнейшие действия.</p><p class="service-limit">Взаимодействие с министерствами, руководством регионов и институтами развития. Решения о поддержке и финансировании принимают соответствующие организации.</p></div><div><a href="mailto:leontev@leontevpro.ru?subject=%D0%9E%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%3A%20GR%20%D0%B8%20%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D1%8B" class="text-link">Обсудить направление<span class="arrow" aria-hidden="true">↗</span></a></div></div></details><details name="services" class="service-disclosure" id="project-support"><summary><span class="service-no">05</span><h3>Сопровождение реализации</h3><p>Собрать людей, ресурсы и договорённости в последовательную работу.</p><span class="expand-symbol" aria-hidden="true">+</span></summary><div class="service-expanded"><div><span class="detail-label">С какой задачей</span><p>Есть стратегия, но не определены исполнители и порядок действий.</p></div><div><span class="detail-label">Результат этапа</span><p>Этапы, ответственность, контроль продвижения и передача дальнейшего ведения.</p></div><div><a href="mailto:leontev@leontevpro.ru?subject=%D0%9E%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%3A%20%D0%A1%D0%BE%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8" class="text-link">Обсудить направление<span class="arrow" aria-hidden="true">↗</span></a></div></div></details></div></div></section>
+<section class="approach-strip light" id="approach"><div class="wrap approach-inner"><div class="approach-image"><img src="/assets/clear-path.webp" alt="" width="1536" height="1024" loading="lazy"></div><div><div class="eyebrow">Простой принцип</div><h2>Сначала — главное.<br>Затем — действия.</h2><p>Цель → ограничение → решение → реализация → проверка.</p></div></div></section>
+<section class="section compact-experience" id="experience"><div class="wrap"><div class="section-top"><div><div class="eyebrow">Практика развития</div><h2>Истории развития бизнеса.</h2></div></div><div class="proof-grid"><article id="story-own-production" class="story-card">
+<div class="story-card-top"><span class="proof-label">Собственный бизнес</span><span class="story-number">01</span></div>
+<h3>От идеи своего продукта — к собственному производству.</h3><p>Контрактный выпуск под своим брендом стал первым этапом. За ним — собственное производство, продукция и активные продажи.</p>
+<button type="button" class="story-open text-link" data-story="case-own-production" aria-haspopup="dialog" aria-controls="case-own-production">Было → стало <span aria-hidden="true">↗</span><span class="sr-only">: От идеи своего продукта — к собственному производству.</span></button>
+</article><article id="story-infrastructure-market" class="story-card">
+<div class="story-card-top"><span class="proof-label">Переговоры и выход на рынок</span><span class="story-number">02</span></div>
+<h3>Как материалы производителей вышли на объекты РЖД.</h3><p>От поиска новых заказов — к согласованиям, испытаниям и применению продукции на инфраструктурных объектах.</p>
+<button type="button" class="story-open text-link" data-story="case-infrastructure-market" aria-haspopup="dialog" aria-controls="case-infrastructure-market">Было → стало <span aria-hidden="true">↗</span><span class="sr-only">: Как материалы производителей вышли на объекты РЖД.</span></button>
+</article><article id="story-regional-development" class="story-card">
+<div class="story-card-top"><span class="proof-label">GR и финансирование</span><span class="story-number">03</span></div>
+<h3>От поиска поддержки — к полученным льготным кредитам.</h3><p>Компания получила финансирование. Переговоры с руководством регионов открыли варианты размещения производства в особых экономических зонах.</p>
+<button type="button" class="story-open text-link" data-story="case-regional-development" aria-haspopup="dialog" aria-controls="case-regional-development">Было → стало <span aria-hidden="true">↗</span><span class="sr-only">: От поиска поддержки — к полученным льготным кредитам.</span></button>
+</article></div><dialog class="story-dialog" id="case-own-production" aria-labelledby="case-title-own-production">
+<div class="story-dialog-bar"><span>История 01 · Собственный бизнес</span><button type="button" class="story-close" data-close-story aria-label="Закрыть историю">Закрыть <span aria-hidden="true">×</span></button></div>
+<div class="story-dialog-body"><h2 id="case-title-own-production">От идеи своего продукта — к собственному производству.</h2>
+<div class="before-after"><div><span class="detail-label">Было</span><p>Идея выпускать строительные материалы под своим брендом. Производственный бизнес предстояло создать с нуля.</p></div><div><span class="detail-label">Стало</span><p>Собственный бренд, производство и продажи строительных материалов.</p></div></div>
+<div class="story-turn"><span class="detail-label">Ключевое решение</span><h3>Начать с контрактного выпуска и последовательно выстроить весь бизнес.</h3></div>
+<ol class="story-route"><li>Идея и бренд</li><li>Контрактный выпуск</li><li>Своё производство</li></ol><div class="story-narrative"><p>Я начал с идеи собственного продукта и организовал его контрактный выпуск на производственной площадке партнёра. Это стало первым этапом развития бренда и продаж.</p><p>Следующим шагом стало собственное производство. Мы организовали выпуск своей продукции и активно её продавали. Параллельно я занимался документацией и согласованиями, необходимыми для применения материалов на инфраструктурных объектах.</p><p>Моя ответственность охватывала весь путь: определить цель, собрать участников, выстроить производство и довести продукт до заказчика. Так первоначальная идея выросла в самостоятельный производственный бизнес.</p></div>
+<aside class="story-insight"><span class="detail-label">Что показывает эта история</span><p>В производственном бизнесе нужно связать четыре задачи: что выпускаем, как производим, где продукт можно применять и кому продаём. Последовательность этих решений определяет путь от идеи к работающему бизнесу.</p></aside>
+<a class="text-link story-contact" href="#contact" data-close-story>Обсудить похожую задачу <span aria-hidden="true">↗</span></a></div></dialog><dialog class="story-dialog" id="case-infrastructure-market" aria-labelledby="case-title-infrastructure-market">
+<div class="story-dialog-bar"><span>История 02 · Переговоры и выход на рынок</span><button type="button" class="story-close" data-close-story aria-label="Закрыть историю">Закрыть <span aria-hidden="true">×</span></button></div>
+<div class="story-dialog-body"><h2 id="case-title-infrastructure-market">Как материалы производителей вышли на объекты РЖД.</h2>
+<div class="before-after"><div><span class="detail-label">Было</span><p>Производители искали новые заказы и хотели выйти со своими материалами на объекты РЖД.</p></div><div><span class="detail-label">Стало</span><p>Материалы нескольких производителей согласованы и применены на объектах.</p></div></div>
+<div class="story-turn"><span class="detail-label">Ключевое решение</span><h3>Выстроить весь путь от производителя до решения о применении материала.</h3></div>
+<ol class="story-route"><li>Новый рынок</li><li>Согласования и испытания</li><li>Применение на объектах</li></ol><div class="story-narrative"><p>К нам обращались производители строительных материалов, которым нужен был выход на инфраструктурные объекты. Для конкретного проекта требовалось согласовать применение продукции с профильными институтами и заказчиком.</p><p>Я выстраивал взаимодействие с проектными институтами, заказчиками и генподрядчиками. Вместе проходили согласования, организовывали испытания и пробные работы. Где требовалось, участвовал в разработке узлов и технических решений совместно с проектировщиками.</p><p>В результате материалы появились на объектах РЖД. Этот путь удалось пройти с продукцией нескольких производителей: переговоры завершались практическим применением материалов.</p></div>
+<aside class="story-insight"><span class="detail-label">Что показывает эта история</span><p>В сложных B2B-продажах важно понять весь порядок принятия решения. Производитель, проектировщик, заказчик и подрядчик должны получить необходимые им основания для следующего шага.</p></aside>
+<a class="text-link story-contact" href="#contact" data-close-story>Обсудить похожую задачу <span aria-hidden="true">↗</span></a></div></dialog><dialog class="story-dialog" id="case-regional-development" aria-labelledby="case-title-regional-development">
+<div class="story-dialog-bar"><span>История 03 · GR и финансирование</span><button type="button" class="story-close" data-close-story aria-label="Закрыть историю">Закрыть <span aria-hidden="true">×</span></button></div>
+<div class="story-dialog-body"><h2 id="case-title-regional-development">От поиска поддержки — к полученным льготным кредитам.</h2>
+<div class="before-after"><div><span class="detail-label">Было</span><p>Компании требовались финансирование и понятный путь развития производства в регионах.</p></div><div><span class="detail-label">Стало</span><p>Льготные кредиты получены. Есть дорожная карта и варианты размещения производства в разных регионах.</p></div></div>
+<div class="story-turn"><span class="detail-label">Ключевое решение</span><h3>Связать задачу бизнеса с возможностями регионов и выйти на уровень принятия решений.</h3></div>
+<ol class="story-route"><li>Запрос бизнеса</li><li>Переговоры с регионами</li><li>Финансирование и варианты</li></ol><div class="story-narrative"><p>Производственной компании нужно было понять, на какую поддержку она может рассчитывать и как перейти от запроса к конкретным условиям финансирования и размещения.</p><p>С моей помощью проект вышел на уровень первых лиц регионов. В ходе переговоров появились предложения по особой экономической зоне, льготному кредитованию и приобретению оборудования. Для дальнейшей проработки создали комиссию и дорожную карту.</p><p>Компания подала документы и получила льготные кредиты. По размещению в ОЭЗ продолжаются предметные переговоры. При этом появился и вариант в другом регионе — с другим набором преференций.</p></div><p class="story-status">Льготные кредиты получены. Размещение в ОЭЗ — в переговорах.</p><section class="sez-economics" aria-labelledby="sez-economics-title">
+<span class="detail-label">Возможности ОЭЗ · пример условий</span>
+<h3 id="sez-economics-title">Что это может дать в деньгах?</h3>
+<p>На примере ОЭЗ «Новочебоксарск» и «Алабуга»: на каждые 100 ₽ налогооблагаемой прибыли налог может составлять 2 ₽ вместо обычных 25 ₽.</p>
+<div class="sez-numbers"><div><small>Обычная ставка</small><strong>25 ₽</strong></div><span aria-hidden="true">→</span><div><small>Льготная ставка</small><strong>2 ₽</strong></div></div>
+<p class="sez-caption">Сравнение налога на прибыль при одинаковой базе. Это не все налоги предприятия и не процент от выручки.</p>
+<ol class="sez-timeline"><li><strong>2%</strong><span>Первые 5 налоговых периодов</span></li><li><strong>7%</strong><span>С 6-го по 10-й период</span></li><li><strong>15,5%</strong><span>После 10-го периода</span></li></ol>
+<p class="sez-caption">Отсчёт — с периода первой налогооблагаемой прибыли по деятельности в ОЭЗ. При сохранении права на льготы и в пределах срока их действия. У отдельных имущественных льгот — свои сроки и условия.</p>
+<p>Дополнительно проверяются льготы по недвижимости и земле: в Новочебоксарске — соответственно 10 и 5 лет при выполнении установленных условий.</p>
+<details class="sez-example"><summary>А если учесть перенос производства?</summary><div>
+<p><strong>Условный пример, не результат этого проекта.</strong> Прибыль до налога — 20 млн ₽ в год; дополнительные текущие расходы после переезда — 2 млн ₽ в год; разовый отток на перенос — 8 млн ₽.</p>
+<pre class="sez-tree">Обычная площадка: 20 − 5 = 15 млн ₽
+ОЭЗ: 20 − 2 − 0,36 = 17,64 млн ₽
+Разница за год: +2,64 млн ₽
+За 5 лет: 2,64 × 5 − 8 = +5,20 млн ₽</pre>
+<p>После дополнительных текущих расходов и налога остаётся на <strong>2,64 млн ₽ в год больше</strong>. Разовый перенос покрывается примерно за 3,0 года. Если ежегодные дополнительные расходы вырастут до 4 млн ₽, эффект за первые пять лет станет отрицательным: −4,60 млн ₽.</p>
+<p class="sez-caption">Упрощённое сравнение при пяти полных прибыльных периодах и сохранении ставки 2%. Сумма 8 млн ₽ — только условные затраты на перенос, не бюджет проекта и не достаточный объём инвестиций для резидентства. Дополнительные капитальные вложения, финансирование и изменения оборотного капитала здесь не рассчитаны; налоговый эффект разовых затрат не учтён. Имущественные и таможенные льготы в пример не включены. Поэтому это не оценка окупаемости инвестиционного проекта.</p>
+</div></details>
+<p class="sez-caption sez-sources">Условия проверены 26.09.2026: <a href="https://www.nalog.gov.ru/rn16/about_fts/docs/16619867/" target="_blank" rel="noopener noreferrer">закон Татарстана</a> · <a href="https://investchr.ru/support/regionalform/oez-novocheboksarsk" target="_blank" rel="noopener noreferrer">инвестпортал Чувашии</a> · <a href="https://www.consultant.ru/document/cons_doc_LAW_19671/204a1acac08adaa6ddf46dd4d1381aec4b65e638/" target="_blank" rel="noopener noreferrer">условия сохранения льгот</a>. Для новых резидентов с 01.04.2026 действуют дополнительные требования; расчёт для компании делается по её проекту и соглашению.</p>
+</section>
+<aside class="story-insight"><span class="detail-label">Что показывает эта история</span><p>GR приносит бизнесу пользу, когда встреча связана с конкретным проектом, условиями и дальнейшими действиями. В этой работе переговоры дали компании финансирование и несколько направлений для развития производства.</p></aside>
+<a class="text-link story-contact" href="#contact" data-close-story>Обсудить похожую задачу <span aria-hidden="true">↗</span></a></div></dialog><details class="bio-details"><summary>Профессиональная история и образование <span aria-hidden="true">+</span></summary><div class="bio-expanded"><div><p><strong>Предпринимательский опыт:</strong> создание строительного бизнеса с нуля и выход на контракты на инфраструктурных объектах РЖД; развитие производства материалов под собственным брендом. Направления развивались параллельно. С 2025 года — проекты развития бизнеса.</p><p>Дополнительный опыт — вывод поставщиков в крупные торговые сети и запуск нового производственного продукта до первых поставок. Ранее — инженерные и руководящие роли в строительстве, работа на крупных проектах, включая башню «Федерация» и олимпийские объекты.</p></div><div><p><strong>Образование:</strong> РАНХиГС — магистр государственного и муниципального управления; ЧГУ — инженер-строитель.</p><p><strong>Дополнительная подготовка:</strong> финансовый менеджмент, бизнес; профессиональная переподготовка в Институте психотерапии и клинической психологии по программе «НЛП. Подготовка тренеров», 584 часа.</p></div></div></details></div></section>
+<section class="compact-media" id="media"><div class="wrap"><div class="media-panel"><div><span class="media-brand">LEONTIEVA MEDIA</span><h2>Развитию нужна<br>публичность?</h2></div><div><p>Елена Леонтьева и продюсерский центр помогут с ТВ, видеоинтервью и публикациями. Медийную часть можно подключить к вашему проекту.</p><div class="actions"><a href="https://leontieva.media/interview/" class="text-link" target="_blank" rel="noopener noreferrer">Посмотреть медиаформаты<span class="arrow" aria-hidden="true">↗</span></a></div></div></div></div></section>
+<section class="section compact-contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Начнём с задачи</div><h2>Что вы хотите<br>изменить?</h2><p class="lead">Напишите, чем занимается компания и какой результат нужен. Определим, где моё участие будет полезно.</p><p class="compact-price"><strong>Стоимость — индивидуальная.</strong><br>Состав, результат и сроки согласуем до начала.</p></div><div class="contact-links"><a href="mailto:leontev@leontevpro.ru?subject=%D0%9E%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D1%83%20%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D1%8F%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0" class="contact-link"><span><small>Написать на почту</small><strong>leontev@leontevpro.ru</strong></span><span class="arrow" aria-hidden="true">↗</span></a><a href="https://max.ru/u/f9LHodD0cOIlFPeC7fjqiftAOPJhb94BRVUTJibuhFbhBWIT3RSeWDcrhGE" class="contact-link" target="_blank" rel="noopener noreferrer"><span><small>Обсудить в мессенджере</small><strong>Написать в MAX</strong></span><span class="arrow" aria-hidden="true">↗</span></a><a href="tel:+79264360320" class="contact-link"><span><small>Позвонить</small><strong>+7 926 436-03-20</strong></span><span class="arrow" aria-hidden="true">↗</span></a></div></div></section></main><footer class="footer"><div class="wrap footer-inner"><span>© Павел Леонтьев, 2026</span><div class="footer-links"><a href="/archive/real-estate-2026/" class="" target="_blank" rel="noopener noreferrer">Архив: недвижимость</a><a href="https://leontieva.media/" class="" target="_blank" rel="noopener noreferrer">LEONTIEVA MEDIA ↗</a><a href="mailto:leontev@leontevpro.ru" class="">leontev@leontevpro.ru</a></div></div></footer></body></html>
