@@ -33,3 +33,39 @@ document.querySelectorAll('.story-dialog').forEach(dialog => {
     if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
   });
 });
+
+// Progressive enhancement: content stays readable with JavaScript or motion off.
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+if ('IntersectionObserver' in window && !motionPreference.matches) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.route-intro, .decision-route li, .participation-grid > div, .story-card, .media-panel').forEach(element => {
+    element.classList.add('reveal-on-scroll');
+    observer.observe(element);
+  });
+  const showAll = () => document.querySelectorAll('.reveal-on-scroll').forEach(element => element.classList.add('is-visible'));
+  motionPreference.addEventListener('change', event => { if (event.matches) { observer.disconnect(); showAll(); } });
+  document.addEventListener('focusin', event => event.target.closest('.reveal-on-scroll')?.classList.add('is-visible'));
+}
+
+const progressBar = document.querySelector('.reading-progress span');
+if (progressBar) {
+  let scheduled = false;
+  const updateProgress = () => {
+    const distance = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = distance > 0 ? Math.min(1, Math.max(0, window.scrollY / distance)) : 0;
+    progressBar.style.transform = `scaleX(${ratio})`;
+    scheduled = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!scheduled) { scheduled = true; requestAnimationFrame(updateProgress); }
+  }, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+}
