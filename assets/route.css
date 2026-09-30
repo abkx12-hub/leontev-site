@@ -235,3 +235,15 @@ body{background:#f6f5f0}
 
 /* Keep the longer, concrete offer balanced with the portrait and first-screen CTA. */
 .compact-hero h1.simple-offer em{font-size:.8em;letter-spacing:-.045em;line-height:1.12}
+
+/* Distinct contact actions on the gold background. */
+.compact-contact .contact-link[href^="mailto:"]{background:#102a3b;border-color:#102a3b;color:#fff}
+.compact-contact .contact-link[href^="mailto:"] small{color:#cbdce6}
+.compact-contact .contact-link[href^="mailto:"]:hover{background:#1b4056;border-color:#1b4056;color:#fff}
+.compact-contact .contact-link[href^="https://max.ru/"]{background:#1c5942;border-color:#1c5942;color:#fff}
+.compact-contact .contact-link[href^="https://max.ru/"] small{color:#d7eee0}
+.compact-contact .contact-link[href^="https://max.ru/"]:hover{background:#154530;border-color:#154530;color:#fff}
+.compact-contact .contact-link[href^="tel:"]{background:#fff9eb;border-color:#102a3b;color:#102a3b}
+.compact-contact .contact-link[href^="tel:"] small{color:#375362}
+.compact-contact .contact-link[href^="tel:"]:hover{background:#fff;border-color:#102a3b;color:#102a3b}
+.compact-contact .contact-link:focus-visible{outline:3px solid #102a3b;outline-offset:5px}
