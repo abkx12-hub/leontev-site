@@ -12,3 +12,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.situation-plus{transition:none}}
 
 .reputation-page .skip-link{position:fixed;left:18px;top:-100px;z-index:100;background:#142e3b;color:white;padding:12px}.reputation-page .skip-link:focus{top:12px}.relationship-hero h1 em{display:inline}
+
+/* Keep profile cards readable on narrow phones. */
+@media(max-width:360px){.program-team article{grid-template-columns:1fr}}
